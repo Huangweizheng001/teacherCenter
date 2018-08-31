@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">-->
+    <meta name="format-detection" content="telephone=yes">
+    <meta name="Keywords" content="福建教育网">
+    <meta name="description" content="福建教育网" />
+    <title>老师个人中心-订单管理</title>
+    <link rel="shortcut icon" href="./images/public/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/swiper,animate,scroll.min.css" />
+    <link rel="stylesheet" href="css/fetv.css" />
+    <link rel="stylesheet" href="css/fetvAppend.css" />
+
+</head>
+
+<body>
+    <header id="header">
+        <teacher-header-template></teacher-header-template>
+    </header>
+<section class="feteachercenter">
+    <div class="container">
+ <div id="leftaside">
+            <teacher-left-template></teacher-left-template>
+        </div> 
+        <div class="feteacherpersonalcenter-right"   style="position:relative">
+            <div class="feteacherpersonalcenter-right-head ">
+                <span>交易中心 <i class="uk-icon-angle-right"></i></span>
+                <span>订单管理</span>
+                <!--<span><a href="">预览主页</a></span>-->
+            </div>
+            <!--订单管理-->
+            <div class="feordermanage">
+                <div class="feorder-nav">
+                    <span class="active" data-id="1">已售课程</span>
+                    <span data-id="2">已买课程</span>
+                </div>
+                <!--已售课程-->
+                <div class="feorder-body" id="sold">
+                    <div class="feorder-title ">
+                        <div class="span4">课程</div>
+                        <div class="span2">单价</div>
+                        <div class="span2">数量</div>
+                        <div class="span2">实付款</div>
+                        <div class="span2">学生信息</div>
+                    </div>
+                    <ul class="feorder-content">
+                        <li class="" v-cloak v-for="item in soldorder" style="height:210px">
+                            <p><span>{{item.orderTime}}</span><span>订单号：{{item.orderNumber}}</span></p>
+                            <div class="span4">
+                                <div class="feimage" style="height:100%">
+                                    <img v-bind:src="item.iconPath|addRootFile" alt="">
+                                    <h2 style="width:245px;">{{item.courseName}}</h2>
+                                </div>
+                            </div>
+                            <div class="span2">
+                                <span>￥ {{item.preferentialTotalPrice}}</span>
+                            </div>
+                            <div class="span2">
+                                <b>{{item.quantity}}</b>
+                            </div>
+                            <div class="span2">
+                                <span>￥ {{item.totalPrice}}</span>
+                            </div>
+                            <div class="span2">
+                                <b>{{item.purchaser}}</b>
+                            </div>
+                        </li>
+                    </ul>
+                    <div style="clear: both"></div>
+                    <!--枫叶-->
+                    <ul class="pagenationbox" style="position: absolute;bottom: 0;left: 0;right: 0">
+                        <li v-cloak v-show="current != 1" @click="current-- && goto(current--)">
+                            <a href="#this">上一页</a>
+                        </li>
+                        <li v-cloak v-for="index in pages" @click="goto(index)" :class="{'active':current == index}" :key="index">
+                            <a href="#this">{{index}}</a>
+                        </li>
+                        <li v-show="allpage != current && allpage != 0 " @click="current++ && goto(current++)">
+                            <a href="#this">下一页</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--已买课程-->
+                <div class="feorder-body" id="buy" style="display:none">
+                    <div class="feorder-title ">
+                        <div class="span4">课程</div>
+                        <div class="span2">实付款</div>
+                        <div class="span2">课程类型</div>
+                        <div class="span2">支付状态</div>
+                        <div class="span2">操作</div>
+                    </div>
+                    <ul class="feorder-content">
+                        <li class="" v-cloak v-for="item in buyorder" style="height:210px">
+                            <p><span>{{item.orderTime}}</span><span>订单号：{{item.orderNumber}}</span></p>
+                            <div class="span4">
+                                <div class="feimage" style="height:100%">
+                                    <img v-bind:src="item.iconPath|addRootFile" alt="">
+                                     <h2 style="width:245px;">{{item.courseName}}</h2>
+                                </div>
+                            </div>
+                            <div class="span2">
+                                <span>￥ {{item.TotalPrice}}</span>
+                            </div>
+                            <div class="span2">
+                                <b>{{item.recordType}}</b>
+                            </div>
+                            <div class="span2">
+                                <b>{{item.payState}}</b>
+                            </div>
+                            <div class="span2">
+                                <!--<b>{{item.payState}}</b>-->
+                                <a class="bulecolor" v-if="item.payState=='未支付'" v-bind:href="item.courseId,item.orderId|payRoot" target="_blank">去支付</a>
+                                <a class="bulecolor" v-else v-bind:href="item.courseId,item.recordType|gotoCourseRoot" target="_blank">查看详情</a>
+                                <a class="bulecolor" @click="delUnOrder(item.orderId)" >| 删除</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div style="clear: both"></div>
+                    <!--枫叶-->
+                    <ul class="pagenationbox" style="position: absolute;bottom: 0;left: 0;right: 0">
+                        <li v-cloak v-show="current != 1" @click="current-- && goto(current--)">
+                            <a href="#this">上一页</a>
+                        </li>
+                        <li v-cloak v-for="index in pages" @click="goto(index)" :class="{'active':current == index}" :key="index">
+                            <a href="#this">{{index}}</a>
+                        </li>
+                        <li v-show="allpage != current && allpage != 0 " @click="current++ && goto(current++)">
+                            <a href="#this">下一页</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+</section>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.storage.js"></script>
+<script type="text/javascript" src="js/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="js/layer,wow,scroll.js"></script>
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script type="text/javascript" src="js/vue-resource.min.js"></script>
+<script type="text/javascript" src="js/fetv.js"></script>
+<script type="text/javascript" src="js/fetvAppend.js"></script>
+<script type="text/javascript" src="js/teacher.js"></script>
+<script>
+    $(function () {
+        ordermanage();
+    })
+</script>
+</body>
+
+</html>

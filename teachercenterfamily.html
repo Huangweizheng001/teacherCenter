@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">-->
+    <meta name="format-detection" content="telephone=yes">
+    <meta name="Keywords" content="福建教育网">
+    <meta name="description" content="福建教育网" />
+    <title>老师个人中心-家校互动</title>
+    <link rel="shortcut icon" href="./images/public/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/swiper,animate,scroll.min.css" />
+    <link rel="stylesheet" href="css/Ecalendar.css" />
+    <link rel="stylesheet" href="css/fetv.css" />
+    <link rel="stylesheet" href="css/fetvAppend.css" />
+    <link rel="stylesheet" href="css/Ecalendar.css" />
+</head>
+
+<body>
+    <header id="header">
+        <teacher-header-template></teacher-header-template>
+    </header>
+<section class="feteachercenter">
+    <div class="container">
+ <div id="leftaside">
+            <teacher-left-template></teacher-left-template>
+        </div> 
+        <div class="feteacherpersonalcenter-right" id=""  style="position: relative">
+            <div class="feteacherpersonalcenter-right-head ">
+                <span>学生管理 <i class="uk-icon-angle-right"></i></span>
+                <span>家校互动</span>
+            </div>
+            <!--我的老师-->
+            <div class="feteacherfamily">
+                <!--头部切换栏-->
+                <div class="fehead">
+                    <b>我的课程:</b>
+                    <span class="active" data-id="1">答疑解惑</span>
+                    <span data-id="2">召开家长会</span>
+                </div>
+                <!--答疑解惑-->
+                <div id="answeringreply">
+                    <!--筛选框-->
+                    <div class="feselect">
+                        <ul>
+                            <li>
+                                <span>课程名称 :</span>
+                                <input type="text" placeholder="请输入关键字" name="suject" id="suject">
+                            </li>
+                            <li style="position: relative">
+                                <span>提问时间 :</span>
+                                <input type="text" readonly="readonly" placeholder="请选择时间" name="questiontime" id="questiontime">
+                            </li>
+                            <li>
+                                <span>回复状态 :</span>
+                                <select name="state" id="state">
+                                    <option value="0">未解决</option>
+                                    <option value="1">已解决</option>
+                                </select>
+                            </li>
+                        </ul>
+                        <div class="feoperation">
+                            <button>查&nbsp;&nbsp;&nbsp;询</button>
+                            <button>清&nbsp;&nbsp;&nbsp;空</button>
+                        </div>
+                    </div>
+            
+                    <div class="fecontent"  id="">
+                        <div class="fetitle">
+                            <div class="span1">序号</div>
+                            <div class="span3">提问内容</div>
+                            <div class="span2">课程名称</div>
+                            <div class="span1">提问人</div>
+                            <div class="span2">提问时间</div>
+                            <div class="span1">回复状态</div>
+                            <div class="span2">操作</div>
+                        </div>
+                        <div class="felist" v-cloak v-for="(item,index) in result">
+                            <div class="span1">{{index+1}}</div>
+                            <div class="span3"><a class="textoverflow">{{item.content}}</a></div>
+                            <div class="span2"><a class="textoverflow">{{item.coursename}}</a></div>
+                            <div class="span1">{{item.studentname}}</div>
+                            <div class="span2">{{item.Time}}</div>
+                            <div class="span1">{{item.reply}}</div>
+                            <div class="span2">
+                                <a class="bulecolor" @click="jumpjieda(item.questionId,item.questionTitle,item.coursename,item.Time,item.studentname)">解答</a>
+                            </div>
+                        </div>
+                        <!--枫叶-->
+                        <ul class="pagenationbox" style="position: absolute;bottom: 0;left: 0;right: 0">
+                            <li v-cloak v-show="current != 1" @click="current-- && goto(current--)">
+                                <a href="#this">上一页</a>
+                            </li>
+                            <li v-cloak v-for="index in pages" @click="goto(index)" :class="{'active':current == index}" :key="index">
+                                <a href="#this">{{index}}</a>
+                            </li>
+                            <li v-show="allpage != current && allpage != 0 " @click="current++ && goto(current++)">
+                                <a href="#this">下一页</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--召开家长会-->
+                <div id="parentcontact" style="display:none">
+                    <p class="addnewPop"><button><i class="uk-icon-plus-circle"></i>新增会议</button></p>
+                    <!--内容显示栏-->
+                    <div class="fecontent"  id="OpenMeeting">
+                        <div class="fetitle">
+                            <div class="span1">序号</div>
+                            <div class="span3">会议内容</div>
+                            <div class="span3">会议开始时间</div>
+                            <div class="span2">状态</div>
+                            <div class="span3">操作</div>
+                        </div>
+                        <div class="felist" v-cloak v-for="(item,index) in result">
+                            <div class="span1">{{index+1}}</div>
+                            <div class="span3"><a class="textoverflow">{{item.note}}</a></div>
+                            <div class="span3">{{item.playBTime}}</div>
+                            <div class="span2">{{item.statesname}}</div>
+                            <div class="span3">
+                               <!-- <a href="" class="orange">查看详情</a>
+                                <span>|</span>-->
+                                <a @click="lookmeeting(item.channelProgramId,item.classId,item.name,item.playBTime,item.playETime,item.note)">修改</a>
+                            </div>
+                        </div>
+                        <!--枫叶-->
+                        <ul class="pagenationbox" style="position: absolute;bottom: 0;left: 0;right: 0">
+                            <li v-cloak v-show="current != 1" @click="current-- && goto(current--)">
+                                <a href="#this">上一页</a>
+                            </li>
+                            <li v-cloak v-for="index in pages" @click="goto(index)" :class="{'active':current == index}" :key="index">
+                                <a href="#this">{{index}}</a>
+                            </li>
+                            <li v-show="allpage != current && allpage != 0 " @click="current++ && goto(current++)">
+                                <a href="#this">下一页</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--新增窗口-->
+                    <div id="addnewPop" class="container" style="display: none">
+                        <ul class="addmeeting">
+                            <input type="hidden" id="saveT" value="add"/>
+                            <input type="hidden" id="channelProgramId"/>
+                            <li>
+                                <span>班级:</span>
+                                <select>
+                                    <option v-cloak v-for="item in classarray" id="class" v-bind:value="item.classId">{{item.name}}</option>
+                                </select>
+                            </li>
+                            <li>
+                                <span>会议标题:</span>
+                                <input type="text" id="title" placeholder="格式:2017秋季期中家长会">
+                            </li>
+                            <li style="position:relative">
+                                <span>开始时间:</span>
+                                <input type="text" id="meetingBTime" placeholder="格式:2017-11-09 16:30">
+                            </li>
+                            <li style="position:relative">
+                                <span>结束时间:</span>
+                                <input type="text" id="meetingETime" placeholder="格式:2017-11-09 16:30">
+                            </li>
+                            <li>
+                                <span>会议大纲:</span>
+                                <textarea name="" id="metContent"></textarea>
+                            </li>
+                            <li>
+                                <span>会议形式:</span>
+                                <input type="text" id="xingshi" value="直播">
+                            </li>
+                            <div class="feoperation">
+                                <button>保存</button>
+                                <button>取消</button>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+              
+                <div style="clear: both"></div>
+            </div>
+        </div>
+        <div style="clear: both"></div>
+           </div>
+   
+</section>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!--<script type="text/javascript" src="js/jquery.zclip.js"></script>-->
+<script type="text/javascript" src="js/jquery.storage.js"></script>
+<script type="text/javascript" src="js/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="js/layer,wow,scroll.js"></script>
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script type="text/javascript" src="js/vue-resource.min.js"></script>
+<script type="text/javascript" src="js/Ecalendar.jquery.min.js"></script>
+<script type="text/javascript" src="js/fetv.js"></script>
+<script type="text/javascript" src="js/fetvAppend.js"></script>
+<script type="text/javascript" src="js/Ecalendar.jquery.min.js"></script>
+<!--<script type="text/javascript" src="js/feteachercenter.js"></script>-->
+<script type="text/javascript" src="js/teacher.js"></script>
+<script>
+    $(function () {
+        $.ajax({
+            async: false,
+            type: "post",
+            url: "ashx/teacherCenter.ashx",
+            data: { action: "getTeacherRz" }, //提交表单，vistor.ashx?ID=XXX
+            success: function (msg) {
+                if (msg != "go_login") {
+                    var ob = JSON.parse(msg);
+                    if (ob.rows[0].rz == "1") {
+                        teacherfamily();
+                    }
+                    else {
+                        layer.msg('您还未认证成功，请确认您的个人资料与认证信息是否提交并通过审核');
+                    }
+                }
+                else {
+                    window.location.href = "../login.html";
+                }
+            } //操作成功后的操作！msg是后台传过来的值
+                , error: function (XMLHttpRequest) {
+                    XMLHttpRequest.responseText
+                }
+        });
+       
+    })
+</script>
+</body>
+
+</html>

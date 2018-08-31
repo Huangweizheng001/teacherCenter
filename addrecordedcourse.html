@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">-->
+    <meta name="format-detection" content="telephone=yes">
+    <meta name="Keywords" content="福建教育网">
+    <meta name="description" content="福建教育网" />
+    <title>老师个人中心-添加录播课</title>
+    <link rel="shortcut icon" href="./images/public/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/base.css" />
+    <link href="../ueditor/themes/default/css/ueditor.css" rel="stylesheet" />
+    <!--<link rel="stylesheet" href="css/swiper,animate,scroll.min.css" />-->
+    <!--<link rel="stylesheet" href="css/fetv.css" />-->
+    <link rel="stylesheet" href="css/fetvAppend.css" />
+
+</head>
+
+<body>
+      <header id="header">
+        <teacher-header-template></teacher-header-template>
+    </header>
+<section class="feteachercenter">
+    <div class="container">
+ <div id="leftaside">
+            <teacher-left-template></teacher-left-template>
+        </div> 
+            <div class="feteacherpersonalcenter-right">
+                <div class="feteacherpersonalcenter-right-head ">
+                    <span>我的课程 <i class="uk-icon-angle-right"></i></span>
+                    <span id="topkc"></span>
+                    <span style="float:right;color:green;cursor:pointer" onclick="window.history.go(-1)">返回</span>
+                </div>
+                <!--我的课程-->
+                <form action="" method="post" id="identity-auth">
+                    <input type="hidden" id="isFree" />
+                    <input type="hidden" id="isOpen" />
+                    <input type="hidden" id="isHottest" />
+                    <input type="hidden" id="saveTag" value="add" />
+                     <input type="hidden" id="detail" />
+                     <input type="hidden" id="content" />
+                     <input type="hidden" id="courseId" name="courseId" />
+                    <input type="hidden" id="iconPath" name="iconPath" />
+                    <div class="feaddcourseview">
+                        <div class="fepanel">
+                            <div class="feaddcourseview-title">
+                                <span><b></b>第一步</span> 设置课程基本信息
+                            </div>
+                            <div class="febox">
+                                <span>
+                                    <h9 style="color: red">*</h9>
+                                    课程封面:</span>
+                                <div>
+                                    <img id="preview" src="images/temp/teachercenter-add.jpg" alt="预览" style="" />
+                                    <input type="file" id="photos"  onchange="setPreview(this,'preview')" name="photos" class="">
+                                </div>
+                            </div>
+                            <div class="febox">
+                                <span>
+                                    <h9 style="color: red">*</h9>
+                                    课程名称:</span>
+                                <input type="text" id="name" name="name" class="longth">
+                            </div>
+                            <div class="febox">
+                                <span>
+                                    <h9 style="color: red">*</h9>
+                                    课程标语:</span>
+                                <input type="text" id="title" name="title" class="longth">
+                            </div>
+                            <div class="febox">
+                                <span>
+                                    <h9 style="color: red">*</h9>
+                                    年级:</span>
+                                    <select id="gradeSelect" name="gradeSelect">
+                                        
+                                    </select>
+                            </div>
+                            <div class="febox">
+                                <span>
+                                    <h9 style="color: red">*</h9>
+                                    学科:</span>
+                                    <select id="subjectSelect" name="subjectSelect">
+                                        
+                                    </select>
+                            </div>
+                            <div class="febox">
+                                <span>
+                                    <h9 style="color: red">*</h9>
+                                    课程类型:</span>
+                                    <select disabled id="type" name="type">
+                                        <option value="0">录播课</option>
+                                        <option value="1">微课</option>
+                                    </select>
+                            </div>
+                            <div class="febox">
+                                <span><h9 style="color: red;width:10px;display:inline-block;"></h9>课程价格:</span>
+                                <input type="text" id="price" name="price" onkeyup="this.value=this.value.replace(/[^\d.]/g,'')">元
+                        <input type="checkbox" id="isfree">
+                                <label for="isfree">免费课程</label>
+                            </div>
+                            <div class="febox">
+                                <span><h9 style="color: red;width:10px;display:inline-block;"> </h9>优惠价格:</span>
+                                <input type="text" id="preferentialPrice" name="preferentialPrice" onkeyup="this.value=this.value.replace(/[^\d.]/g,'')">元
+                        <input type="checkbox" id="isforever">
+                                <label for="isforever">推荐课程</label>
+                            </div>
+                            <div class="febox">
+                                <span style="width:140px;"> <h9 style="color: red;width:10px;display:inline-block;"></h9>是否对工作室公开 :</span>
+                                <input type="checkbox" checked name="R_open" style="width:30px" id="R_open"/>
+                            </div>
+                            <div class="febox">
+                                <span> <h9 style="color: red;width:10px;display:inline-block;"></h9>课程简介:</span>
+                                <textarea name="introduce" id="introduce"></textarea>
+                            </div>
+
+                        </div>
+                        <div class="fepanel">
+                            <div class="feaddcourseview-title">
+                                <span><b></b>第二步</span> 填写课程详细信息
+                            </div>
+                            <script id="editor" type="text/plain" style="width: 100%; height: 500px"></script>
+                            <div class="fesave">
+                                <a>保存课程信息</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+    </div>
+        
+    </section>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.storage.js"></script>
+    <!--<script type="text/javascript" src="js/swiper.jquery.min.js"></script>-->
+    <script type="text/javascript" src="js/layer,wow,scroll.js"></script>
+    <script type="text/javascript" src="js/vue.min.js"></script>
+    <script type="text/javascript" src="js/vue-resource.min.js"></script>
+    <script src="../ueditor/ueditor.config.js" type="text/javascript"></script>
+    <script src="../ueditor/ueditor.all.min.js" type="text/javascript"> </script>
+    <script src="../ueditor/lang/zh-cn/zh-cn.js" type="text/javascript"></script>
+   <!-- <script type="text/javascript" charset="utf-8" src="ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="ueditor.all.js"> </script>
+    <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+    <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+    <!--<script type="text/javascript" charset="utf-8" src="lang/zh-cn/zh-cn.js"></script>-->
+    <script type="text/javascript" src="js/fetv.js"></script>
+    <script type="text/javascript" src="js/fetvAppend.js"></script>
+    <!--<script type="text/javascript" src="js/feteachercenter.js"></script>-->
+    <script type="text/javascript" src="js/teacher.js"></script>
+    <script>
+        $(function () {
+            var Request = new Object();
+            Request = GetRequest();
+            var id = '';
+            id = Request["id"];
+            var courseType = Request["type"];
+            setGradeSelect();
+            setSubjectSelect();
+            addTeacherCourse(id,courseType);
+            var ue = UE.getEditor('editor');
+        })
+    </script>
+</body>
+</html>

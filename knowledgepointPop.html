@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">-->
+    <meta name="format-detection" content="telephone=yes">
+    <meta name="Keywords" content="福建教育网">
+    <meta name="description" content="福建教育网" />
+    <title>老师个人中心-知识点弹框</title>
+    <link rel="shortcut icon" href="images/public/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/swiper,animate,scroll.min.css" />
+    <link rel="stylesheet" href="css/Ecalendar.css" />
+    <link rel="stylesheet" href="css/fetv.css" />
+    <link rel="stylesheet" href="css/fetvAppend.css" />
+
+</head>
+
+<body>
+<section>
+    <div class="container">
+        <!--<div class=""  style="position: relative;width: 880px;margin: auto;background: #fff" id="homeworkdetail">-->
+        <!--布置作业1级页面-->
+        <div class="fe-knowledgepoint-pop" id="knowledgePoint" >
+            <div class="fe-nav">
+                <span data-id="0" class="active">使用个人分类</span>
+                <span data-id="1">使用系统分类</span>
+            </div>
+            <div class="fe-person">
+                <div class="feone-level" v-cloak v-for="list in knowledgeArray">
+                    <i class="uk-icon-plus-square-o" v-if="list.child.length>0"></i>
+                    <h4 v-bind:data-id="list.id" v-bind:data-name="list.name" v-bind:data-count="list.count">{{list.name}} <span>题: {{list.count}}</span></h4>
+                    <div class="fetwo-level" v-for="item in list.child">
+                        <i class="uk-icon-plus-square-o" v-if="item.grandson.length>0"></i>
+                        <h4 v-bind:data-id="item.id"  v-bind:data-name="item.name" v-bind:data-count="item.count">{{item.name}} <span>题: {{item.count}}</span></h4>
+                        <div class="fethree-level" v-for="i in item.grandson">
+                            <h4 v-bind:data-id="i.id"  v-bind:data-name="i.name" v-bind:data-count="i.count">{{i.name}} <span>题: {{i.count}}</span></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fe-system" style="display: none">
+                <div class="feone-level" v-cloak v-for="list in SysKnowledgeArray">
+                    <i class="uk-icon-plus-square-o" v-if="list.child.length>0"></i>
+                    <h4 v-bind:data-id="list.id" v-bind:data-name="list.name" v-bind:data-count="list.count">{{list.name}} <span>题: {{list.count}}</span></h4>
+                    <div class="fetwo-level" v-for="item in list.child">
+                        <i class="uk-icon-plus-square-o" v-if="item.grandson.length>0"></i>
+                        <h4 v-bind:data-id="item.id" v-bind:data-name="item.name" v-bind:data-count="item.count">{{item.name}} <span>题: {{item.count}}</span></h4>
+                        <div class="fethree-level" v-for="i in item.grandson">
+                            <h4 v-bind:data-id="i.id" v-bind:data-name="i.name" v-bind:data-count="i.count">{{i.name}} <span>题: {{i.count}}</span></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--</div>-->
+    </div>
+</section>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.zclip.js"></script>
+<script type="text/javascript" src="js/jquery.storage.js"></script>
+<script type="text/javascript" src="js/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="js/layer,wow,scroll.js"></script>
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script type="text/javascript" src="js/vue-resource.min.js"></script>
+<script type="text/javascript" src="js/Ecalendar.jquery.min.js"></script>
+<script type="text/javascript" src="js/fetv.js"></script>
+<script type="text/javascript" src="js/fetvAppend.js"></script>
+<script type="text/javascript" src="js/teacher.js"></script>
+<script>
+    $(function () {
+        knowledgepointPop($(this).getUrlParam("type"));
+    })
+</script>
+</body>
+
+</html>

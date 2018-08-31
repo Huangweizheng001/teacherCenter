@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">-->
+    <meta name="format-detection" content="telephone=yes">
+    <meta name="Keywords" content="福建教育网">
+    <meta name="description" content="福建教育网" />
+    <title>老师个人中心-我的课程</title>
+    <link rel="shortcut icon" href="./images/public/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/base.css" />
+    <!--<link rel="stylesheet" href="css/swiper,animate,scroll.min.css" />-->
+    <!--<link rel="stylesheet" href="css/fetv.css" />-->
+    <link rel="stylesheet" href="css/fetvAppend.css" />
+
+</head>
+
+<body>
+    <header id="header">
+        <teacher-header-template></teacher-header-template>
+    </header>
+<section class="feteachercenter">
+    <div class="container">
+ <div id="leftaside">
+            <teacher-left-template></teacher-left-template>
+        </div> 
+            <div class="feteacherpersonalcenter-right">
+                <div class="feteacherpersonalcenter-right-head ">
+                    <span>我的课程 <i class="uk-icon-angle-right"></i></span>
+                    <span>微课</span>
+                    <span></span>
+                    <b>审核工作时间：09:00-21:00（审核需一天左右，请耐心等待）</b>
+                    <!--<span><a target="_blank">预览主页</a></span>-->
+                </div>
+                <!--我的课程-->
+                <div class="feordermanage">
+                    <div class="feaddcourse">
+                        <a id="tjkcjump"><i class="uk-icon-plus-circle"></i>添加微课</a>
+                    </div>
+                    <div class="feorder-body">
+                        <div class="feorder-title ">
+                            <div class="span3">课程名称</div>
+                            <div class="span2">价格</div>
+                            <div class="span2">售出数量</div>
+                            <div class="span2">状态</div>
+                            <div class="span3">操作</div>
+                        </div>
+                        <div id="list">
+                        </div>
+                        <div style="clear: both"></div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+        </section>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.storage.js"></script>
+    <!--<script type="text/javascript" src="js/swiper.jquery.min.js"></script>-->
+    <script type="text/javascript" src="js/layer,wow,scroll.js"></script>
+    <script type="text/javascript" src="js/vue.min.js"></script>
+    <script type="text/javascript" src="js/vue-resource.min.js"></script>
+    <script type="text/javascript" src="js/fetv.js"></script>
+    <script type="text/javascript" src="js/fetvAppend.js"></script>
+    <!--<script type="text/javascript" src="js/feteachercenter.js"></script>-->
+    <script type="text/javascript" src="js/teacher.js"></script>
+    <script>
+        $(function () {
+            //$.ajax({
+            //    async: false,
+            //    type: "post",
+            //    url: "ashx/teacherCenter.ashx",
+            //    data: { action: "getTeacher" }, //提交表单，vistor.ashx?ID=XXX
+            //    success: function (msg) {
+            //        if (msg != "go_login") {
+            //            var ob = JSON.parse(msg);
+            //            $(".feteacherpersonalcenter-right .feteacherpersonalcenter-right-head span a").attr("href", "http://www.fetv.cn/teachercourse.html?teacherId=" + ob.rows[0].teacherId);
+            //        }
+            //        else {
+            //            window.location.href = "../login.html";
+            //        }
+            //    } //操作成功后的操作！msg是后台传过来的值
+            //      , error: function (XMLHttpRequest) {
+            //          XMLHttpRequest.responseText
+            //      }
+            //});
+            $.ajax({
+                async: false,
+                type: "post",
+                url: "ashx/teacherCenter.ashx",
+                data: { action: "getTeacherRz" }, //提交表单，vistor.ashx?ID=XXX
+                success: function (msg) {
+                    if (msg != "go_login") {
+                        var ob = JSON.parse(msg);
+                        if (ob.rows[0].rz == "1") {
+                            $("#tjkcjump").attr("href", 'addrecordedcourse.html?type=1');
+                            getMicroLecture();
+                        }
+                        else {
+                            layer.msg('您还未认证成功，请确认您的个人资料与认证信息是否提交并通过审核');
+                        }
+                    }
+                    else {
+                        window.location.href = "../login.html";
+                    }
+                } //操作成功后的操作！msg是后台传过来的值
+                , error: function (XMLHttpRequest) {
+                    XMLHttpRequest.responseText
+                }
+            });
+
+        })
+    </script>
+</body>
+
+</html>

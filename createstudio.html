@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">-->
+    <meta name="format-detection" content="telephone=yes">
+    <meta name="Keywords" content="福建教育网">
+    <meta name="description" content="福建教育网" />
+    <title>老师个人中心-创建工作室</title>
+    <link rel="shortcut icon" href="./images/public/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/swiper,animate,scroll.min.css" />
+    <!--<link rel="stylesheet" href="css/fetv.css" />-->
+    <link rel="stylesheet" href="css/fetvAppend.css" />
+
+</head>
+
+<body>
+   <header id="header">
+        <teacher-header-template></teacher-header-template>
+    </header>
+<section class="feteachercenter">
+    <div class="container">
+ <div id="leftaside">
+            <teacher-left-template></teacher-left-template>
+        </div> 
+            <div class="feteacherpersonalcenter-right">
+                <div class="feteacherpersonalcenter-right-head ">
+                    <span>主页管理 <i class="uk-icon-angle-right"></i></span>
+                    <span>我的工作室</span>
+                    <span><i class="uk-icon-angle-right"></i>创建工作室</span>
+                    <span></span>
+                    <a href="teachercentermystudio.html" style="float: right; color: rgb(255, 108, 0); font-size: 16px; padding-right: 20px;">返回</a>
+                </div>
+                <!--创建工作室-->
+                <div class="fecreatestudio" id="fecreatestudio">
+                    <h1>基本信息</h1>
+                    <form action="" id="createstudio-form">
+                        <div class="fepanel">
+                            <span>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;区&nbsp;:</span>
+                            <select name="citySelect" id="citySelect">
+                            </select>
+                        </div>
+                        <div class="fepanel">
+                            <span>学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;段&nbsp;:</span>
+                            <select name="educationalSelect" id="educationalSelect">
+                            </select>
+                        </div>
+                        <div class="fepanel">
+                            <span>学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;科&nbsp;:</span>
+                            <select name="subjectSelect" id="subjectSelect">
+                            </select>
+                        </div>
+                        <div class="fepanel">
+                            <span>工作室头像&nbsp;:</span>
+                            <div class="feimage">
+                                <!--<img src="images/temp/createstudio.png" alt="">-->
+                                 <s id="studiohead"></s>
+                                <input type="file" id="addphoto" name="studiophoto">
+                            </div>
+                            <b>图片大小不超过5M</b>
+                        </div>
+                        <div class="fepanel">
+                            <span>工作室名称&nbsp;:</span>
+                            <input type="text" name="studioname" id="studioname">
+                        </div>
+                        <div class="fepanel">
+                            <span>工作室简介&nbsp;:</span>
+                            <textarea id="introduces"></textarea>
+                        </div>
+                    </form>
+
+                    <!--<h1>成&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;员</h1>-->
+                    <!--<div class="femenber ">-->
+                    <!--<div class="span4">-->
+                    <!--<div class="feaddmender ">-->
+
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="span4">-->
+                    <!--<div class="femenber-content ">-->
+                    <!--<div class="span5">-->
+                    <!--<div class="feimage">-->
+                    <!--<img id="head" src="" alt="">-->
+                    <!--</div>-->
+                    <!--<h5>张少天</h5>-->
+                    <!--</div>-->
+                    <!--<div class="span7">-->
+                    <!--<h4>福州市第一中学</h4>-->
+                    <!--<h6>初中二年级</h6>-->
+                    <!--<h6>语文老师</h6>-->
+                    <!--<button><i class="uk-icon-trash"></i>删除成员</button>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="span4">-->
+                    <!--<div class="femenber-content ">-->
+                    <!--<div class="span5">-->
+                    <!--<div class="feimage">-->
+                    <!--<img id="head" src="" alt="">-->
+                    <!--</div>-->
+                    <!--<h5>张少天</h5>-->
+                    <!--</div>-->
+                    <!--<div class="span7">-->
+                    <!--<h4>福州市第一中学</h4>-->
+                    <!--<h6>初中二年级</h6>-->
+                    <!--<h6>语文老师</h6>-->
+                    <!--<button><i class="uk-icon-trash"></i>删除成员</button>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</div>-->
+
+                    <!--</div>-->
+                    <p><a>保&nbsp;&nbsp;&nbsp;&nbsp;存</a></p>
+                </div>
+            </div>
+    </div>
+
+        </section>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.storage.js"></script>
+    <!--<script type="text/javascript" src="js/swiper.jquery.min.js"></script>-->
+    <script type="text/javascript" src="js/layer,wow,scroll.js"></script>
+    <script type="text/javascript" src="js/vue.min.js"></script>
+    <script type="text/javascript" src="js/vue-resource.min.js"></script>
+    <script type="text/javascript" src="js/fetv.js"></script>
+    <script type="text/javascript" src="js/fetvAppend.js"></script>
+    <script type="text/javascript" src="js/teacher.js"></script>
+
+    <script>
+        $(function () {
+            setSubjectSelect();
+            setEducationalSelect();
+            setCitySelect();
+            createstudio();
+        })
+    </script>
+</body>
+</html>

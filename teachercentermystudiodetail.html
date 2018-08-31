@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">-->
+    <meta name="format-detection" content="telephone=yes">
+    <meta name="Keywords" content="福建教育网">
+    <meta name="description" content="福建教育网" />
+    <title>老师个人中心-我的工作室详细信息</title>
+    <link rel="shortcut icon" href="./images/public/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/base.css" />
+    <!--<link rel="stylesheet" href="css/swiper,animate,scroll.min.css" />-->
+    <!--<link rel="stylesheet" href="css/fetv.css" />-->
+    <link rel="stylesheet" href="css/fetvAppend.css" />
+
+</head>
+
+<body>
+     <header id="header">
+        <teacher-header-template></teacher-header-template>
+    </header>
+<section class="feteachercenter">
+    <div class="container">
+ <div id="leftaside">
+            <teacher-left-template></teacher-left-template>
+        </div> 
+            <div class="feteacherpersonalcenter-right">
+                <div class="feteacherpersonalcenter-right-head ">
+                    <span>主页管理 <i class="uk-icon-angle-right"></i></span>
+                    <span>我的工作室</span>
+                    <span style="font-size: 14px;margin-left: 20px;"><a style="color: #ff6c00!important;" target="_blank">预览主页</a></span>
+                   
+                    <span style="float:right;color:green;cursor:pointer" onclick="window.history.go(-1)">返回</span>
+                </div>
+                <!--我的工作室详细页面-->
+                <div class="femystudiodetail">
+                    <ul class="fetabs">
+                        <li><span class="active" data-id="1">基本信息</span></li>
+                        <li><span data-id="2">资讯</span></li>
+                        <li><span data-id="3">公告</span></li>
+                        <li><span data-id="4">我的成员</span></li>
+                    </ul>
+                    <div class="fecontent">
+                        <!--基本信息-->
+                        <div class="febasicinformation">
+                            <form action="" id="basicinformation">
+                                <div class="fepanel">
+                                    <span>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;区&nbsp;:</span>
+                                    <s id="s_city"></s>
+                                    <select name="citySelect" id="citySelect" class="fehidden">
+                                    </select>
+                                </div>
+                                <div class="fepanel">
+                                    <span>学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;段&nbsp;:</span>
+                                    <s id="s_educational"></s>
+                                    <select name="educationalSelect" id="educationalSelect" class="fehidden">
+                                    </select>
+                                </div>
+                                <div class="fepanel">
+                                    <span>学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;科&nbsp;:</span>
+                                    <s id="s_subject"></s>
+                                    <select name="subjectSelect" id="subjectSelect" class="fehidden">
+                                    </select>
+                                </div>
+                                <div class="fepanel">
+                                    <span>工作室头像&nbsp;:</span>
+                                    <div class="feimage">
+                                        <!--<img src="images/temp/createstudio.png" alt="">-->
+                                         <s style="margin-left:10px" id="studiohead"></s>
+                                        <input type="file" id="addphoto" name="studiophoto">
+                                    </div>
+                                   <!-- <div class="feimage">
+                                        <img id="studiohead" src="images/temp/createstudio.png" alt="">
+                                        <input type="file" name="photo" disabled>
+                                    </div>-->
+                                    <b class="fehidden">图片大小不超过5M</b>
+                                </div>
+                                <div class="fepanel">
+                                    <span>工作室名称&nbsp;:</span>
+                                    <input type="text" value="" id="studioname" disabled maxlength="16" name="studioname">
+                                </div>
+                                <div class="fepanel">
+                                    <span>工作室简介&nbsp;:</span>
+                                    <textarea disabled name="introduces" id="introduces"></textarea>
+                                </div>
+                            </form>
+
+                            <p class="fehidden">
+                                <button>保存基本信息</button></p>
+                            <button><i class="uk-icon-edit"></i>编辑</button>
+                        </div>
+                        <!--资讯-->
+                        <div class="feconsultation" id="feinformation">
+                            <div class="span4">
+                                <div class="feaddconsultation">
+                                </div>
+                            </div>
+                            <div class="span4" v-cloak v-for="item in information">
+                                <div class="fepanel">
+                                    <a target="_blank" v-bind:href="item.newsId|gotoNew" class="feimage">
+                                        <img v-bind:src="item.iconPath|addRootFile" alt="">
+                                    </a>
+                                    <div class="febox">
+                                        <h3><a class="textoverflow" v-bind:title="item.name">{{item.name}}</a></h3>
+                                    </div>
+                                    <ul v-bind:data-id="item.newsId">
+                                        <li><i class="uk-icon-edit"></i></li>
+                                        <li><i class="uk-icon-trash"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div style="clear: both"></div>
+                        </div>
+                        <!--公告-->
+                        <div class="feannouncement" id="feannouncement">
+                            <p>
+                                <button><i class="uk-icon-plus-circle"></i>发布公告</button></p>
+                            <div class="feannouncement-title">
+                                <div class="fetitle">公告标题</div>
+                                <div class="fepublisher">发布人</div>
+                                <div class="fetime">时间</div>
+                                <div class="feoperation">操作</div>
+                            </div>
+                            <div class="feannouncement-content" v-cloak v-for="item in notice">
+                                <div class="fetitle">{{item.title}}</div>
+                                <div class="fepublisher">{{item.publishName}}</div>
+                                <div class="fetime">{{item.publishDate}}</div>
+                                <div class="feoperation" v-bind:data-id="item.activityId">
+                                    <button @click="updateActivity(item.activityId)">编辑</button>
+                                    <span>|</span>
+                                    <button @click="deleteActivity(item.activityId)">删除</button>
+                                </div>
+                                <p class="fehidden">{{item.content}}</p>
+                            </div>
+                           
+                        </div>
+                        <!--我的成员-->
+                        <div class="femymenber" id="femymenber">
+                            <div class="femenber">
+                                <!--<div class="span4">-->
+                                <!--<div class="feaddmender ">-->
+
+                                <!--</div>-->
+                                <!--</div>-->
+                                <div class="span4" v-cloak v-for="item in menber" v-bind:data-id="item.teacherId">
+                                    <div class="femenber-content ">
+                                        <div class="span5">
+                                            <div class="feimage">
+                                                <img v-bind:src="item.iconPath|addRootFile" alt="">
+                                            </div>
+                                            <h5>{{item.teacherName}}</h5>
+                                        </div>
+                                        <div class="span7">
+                                            <h4>{{item.organName}}</h4>
+                                            <h6>{{item.gradeName}}</h6>
+                                            <h6>{{item.subjectName}}</h6>
+                                            <button @click="deleteMember(item.studioTeacherRsId)"><i class="uk-icon-trash"></i>删除成员</button>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+        </section>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.storage.js"></script>
+    <!--<script type="text/javascript" src="js/swiper.jquery.min.js"></script>-->
+    <script type="text/javascript" src="js/layer,wow,scroll.js"></script>
+    <script type="text/javascript" src="js/vue.min.js"></script>
+    <script type="text/javascript" src="js/vue-resource.min.js"></script>
+    <script type="text/javascript" src="js/fetv.js"></script>
+    <script type="text/javascript" src="js/fetvAppend.js"></script>
+    <!--<script type="text/javascript" src="js/feteachercenter.js"></script>-->
+    <script type="text/javascript" src="js/teacher.js"></script>
+    <script>
+        $(function () {
+
+            setSubjectSelect();
+            setEducationalSelect();
+            setCitySelect();
+            var teachingStudioId = $(this).getUrlParam("teachingStudioId");
+            var htmlType = $(this).getUrlParam("htmlType");
+            $(".feteacherpersonalcenter-right .feteacherpersonalcenter-right-head span a").attr("href", "http://www.fetv.cn/teacherstudio.html?teachingStudioId=" + teachingStudioId);//feweb/
+            mystudiodetail(teachingStudioId, htmlType);
+        })
+    </script>
+</body>
+
+</html>

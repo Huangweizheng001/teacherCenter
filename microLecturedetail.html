@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">-->
+    <meta name="format-detection" content="telephone=yes">
+    <meta name="Keywords" content="福建教育网">
+    <meta name="description" content="福建教育网" />
+    <title>老师个人中心-微课详情</title>
+    <link rel="shortcut icon" href="./images/public/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/swiper,animate,scroll.min.css" />
+    <!--<link rel="stylesheet" href="css/fetv.css" />-->
+    <link rel="stylesheet" href="css/fetvAppend.css" />
+
+</head>
+
+<body>
+    <header id="header">
+        <teacher-header-template></teacher-header-template>
+    </header>
+<section class="feteachercenter">
+    <div class="container">
+ <div id="leftaside">
+            <teacher-left-template></teacher-left-template>
+        </div> 
+        
+        <div class="feteacherpersonalcenter-right">
+            <div class="feteacherpersonalcenter-right-head ">
+                <span>我的课程 <i class="uk-icon-angle-right"></i></span>
+                <span>微课</span>
+                <span style="float:right;color:green;cursor:pointer" onclick="window.history.go(-1)">返回</span>
+            </div>
+            <input type="hidden" id="hidden_id" />
+            <!--课程列表-->
+            <div class="feordermanage">
+                <div class="feorder-head">
+                    <span id="courseName"></span>
+                </div>
+                <div class="feaddcourse">
+                    <a id="wkadd" onclick="jump_add()" style="width:135px;"><i class="uk-icon-plus-circle"></i>添加该微课视频</a>
+                </div>
+                <div class="feorder-body">
+                    <div class="feorder-title ">
+                      <!--  <div class="span1"><span>全选</span></div>-->
+                        <div class="span4">名称</div>
+                        <div class="span2">上传时间</div>
+                        <div class="span2">状态</div>
+                        <div class="span4">操作</div>
+                    </div>
+                    <div id="content">
+                        
+                    </div>
+                    <div style="clear: both"></div>
+                </div>
+            </div>
+        </div>
+ </div>
+   
+</section>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.storage.js"></script>
+<!--<script type="text/javascript" src="js/swiper.jquery.min.js"></script>-->
+<script type="text/javascript" src="js/layer,wow,scroll.js"></script>
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script type="text/javascript" src="js/vue-resource.min.js"></script>
+<script type="text/javascript" src="js/fetv.js"></script>
+<script type="text/javascript" src="js/fetvAppend.js"></script>
+<script type="text/javascript" src="js/teacher.js"></script>
+
+<script>
+    $(function () {
+        var Request = new Object();
+        Request = GetRequest();
+        var id = '';
+        id = Request["id"];
+        $("#hidden_id").val(id);
+        getTeacher();
+        getMicroLectureDetail(id);
+    })
+</script>
+    <script>
+        function jump_add() {//fromUrl 返回页（本页面地址） 
+            if ($("#hidden_id").val() != '' && $("#hidden_id").val() != undefined) {
+                window.location.href = "recordedcourseCatalog.html?tag=add&fromUrl=microLecturedetail&v_table=fe_microLecture&v_id=" + $("#hidden_id").val() + "&p_id=0&description=微课视频";
+            }
+            else {
+                layer.alert('请选择课程或课程章节');
+            }
+        }
+    </script>
+</body>
+
+</html>

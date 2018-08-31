@@ -1,0 +1,401 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">-->
+    <meta name="format-detection" content="telephone=yes">
+    <meta name="Keywords" content="福建教育网">
+    <meta name="description" content="福建教育网" />
+    <title>老师个人中心-添加录播课</title>
+    <link rel="shortcut icon" href="./images/public/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/base.css" />
+    <!--<link rel="stylesheet" href="css/swiper,animate,scroll.min.css" />-->
+    <!--<link rel="stylesheet" href="css/fetv.css" />-->
+    <link rel="stylesheet" href="css/fetvAppend.css" />
+
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="../bootstrap/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="../media/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../layer/layer.js" type="text/javascript"></script>
+    <script src="../hplus/js/aliyun-sdk.min.js" type="text/javascript"></script>
+    <script src="../hplus/js/vod-sdk-upload-1.0.6.min.js" type="text/javascript"></script>
+</head>
+<body>
+     <header id="header">
+        <teacher-header-template></teacher-header-template>
+    </header>
+<section class="feteachercenter">
+    <div class="container">
+ <div id="leftaside">
+            <teacher-left-template></teacher-left-template>
+        </div> 
+            <div class="feteacherpersonalcenter-right">
+                <div class="feteacherpersonalcenter-right-head ">
+                    <span>我的课程 <i class="uk-icon-angle-right"></i></span>
+                    <span>录播课</span>
+
+                </div>
+                <!--我的课程-->
+                <form action="" method="post" id="identity-auth">
+                    <div class="feaddcourseview">
+                        <div class="fepanel">
+                            <div class="feaddcourseview-title">
+                                上传课程视频
+                            </div>
+                            <div class="container-fluid">
+                                <div class="row-fluid">
+                                    <div class="span12">
+                                    </div>
+                                </div>
+
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="tab_1">
+                                        <input type="hidden" id="uploadAuth" name="uploadAuth" />
+                                        <input type="hidden" id="uploadAddress" name="uploadAddress" />
+                                        <input type="hidden" id="accessKeyId" name="accessKeyId" value="LTAIm2NCAnY8W7u9" />
+                                        <input type="hidden" id="accessKeySecret" name="accessKeySecret" value="fzn9oa6DnqfRb6RFMSZxQzaxxEC3GU" />
+                                        <input type="hidden" id="secretToken" name="secretToken" />
+                                        <input type="hidden" id="expireTime" name="expireTime" />
+                                        <input type="hidden" id="endpoint" name="endpoint" value="http://oss-cn-shanghai.aliyuncs.com" />
+                                        <input type="hidden" id="bucket" name="bucket" value="ycjdJYJ" />
+                                        <input type="hidden" id="objectPre" name="objectPre" value="upload" />
+                                        <input type="hidden" id="coverurl" name="coverurl" value="" />
+                                        <input type="hidden" id="fromUrl" name="fromUrl" value="" />
+                                        <input type="hidden" id="description" name="description" value="我的视频" />
+                                        <input type="hidden" id="tag" name="tag" />
+                                        <input type="hidden" id="v_table" name="v_table" />
+                                        <input type="hidden" id="v_id" name="v_id" />
+                                        <input type="hidden" id="p_id" name="p_id" />
+                                        
+                                        <div class="controls">
+                                            <input type="file" name="files" id="files" accept="video/*" multiple />
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label"></label>
+                                            <div class="controls">
+                                                <!--<input type="text" id="deleteIndex" size="3" placeholder="请输入您要删除第几个文件" value="" />
+                                                <button type="button" class="btn" onclick="deleteFile()">删除文件</button>
+                                                <button type="button" class="btn" onclick="getList()">获取上传列表</button>
+                                                <button type="button" class="btn" onclick="clearList()">清除上传列表</button>-->
+                                            </div>
+                                        </div>
+                                        <div id="Progress_Bars">
+                                        </div>
+                                        <div class="control-group" style="display: none">
+                                            <label class="control-label">日志</label>
+                                            <div class="controls">
+                                                <select multiple="multiple" id="textarea" style="position: relative; word-wrap: break-word; width: 690px; height: 250px; vertical-align: top; border: 1px solid #cccccc;"></select>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="form-actions" style="padding-bottom:20px;">
+                                    <button type="button" class="btn blue" onclick="start()">开始上传</button>
+                                    <button type="button" class="btn red" onclick="stop()">停止上传</button>
+                                    <button type="button" class="btn yellow" onclick="clearList()">清除上传列表</button>
+                                    <button type="button" class="btn green" onclick="resumeWithToken()">Token恢复上传</button>
+                                    <!--   <button type="button" class="btn" onclick="clearLog()">清日志</button>-->
+                                    <button type="button" class="btn" onclick="winback()">返回</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+    </div>
+        
+    </section>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.storage.js"></script>
+    <!--<script type="text/javascript" src="js/swiper.jquery.min.js"></script>-->
+    <script type="text/javascript" src="js/layer,wow,scroll.js"></script>
+    <script type="text/javascript" src="js/vue.min.js"></script>
+    <script type="text/javascript" src="js/vue-resource.min.js"></script>
+
+    <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+    <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+    <script type="text/javascript" src="js/fetv.js"></script>
+    <script type="text/javascript" src="js/fetvAppend.js"></script>
+    <!--<script type="text/javascript" src="js/feteachercenter.js"></script>-->
+    <script type="text/javascript" src="js/teacher.js"></script>
+    <script>
+        $(function () {
+            
+            var Request = new Object();
+            Request = GetRequest();
+
+            $("#v_table").val(Request["v_table"]);
+            $("#tag").val(Request["tag"]);
+            $("#v_id").val(Request["v_id"]);
+            $("#p_id").val(Request["p_id"]);
+            $("#description").val(Request["description"]);
+            $("#fromUrl").val(Request["fromUrl"]);
+            addTeacherCourse();
+        })
+    </script>
+    <script>
+        var uploader;
+        var fileIndex = 0;
+        var ProgressIndex = 0;
+        window.onload = new function () {
+            uploader = new VODUpload({
+                // 文件上传失败
+                'onUploadFailed': function (uploadInfo, code, message) {
+                    log("onUploadFailed: file:" + uploadInfo.file.name + ",code:" + code + ", message:" + message);
+                },
+                // 文件上传完成
+                'onUploadSucceed': function (uploadInfo) {
+                    ProgressIndex++;
+                    save(uploadInfo.file.name);
+                    log("onUploadSucceed: " + uploadInfo.file.name + ", endpoint:" + uploadInfo.endpoint + ", bucket:" + uploadInfo.bucket + ", object:" + uploadInfo.object);
+                },
+                // 文件上传进度
+                'onUploadProgress': function (uploadInfo, totalSize, uploadedSize) {
+                    Progress_Bar((uploadedSize * 100 / totalSize).toFixed(2), 'bar' + ProgressIndex, 'processbar' + ProgressIndex);
+
+                    log("onUploadProgress:file:" + uploadInfo.file.name + ", fileSize:" + totalSize + ", percent:" + (uploadedSize * 100 / totalSize).toFixed(2) + "%");
+                    //log("onUploadProgress:file:" + uploadInfo.file.name + ", fileSize:" + totalSize + ", percent:" + Math.ceil(uploadedSize * 100 / totalSize) + "%");
+                },
+                // STS临时账号会过期，过期时触发函数
+                'onUploadTokenExpired': function () {
+                    log("onUploadTokenExpired");
+                    if (isVodMode()) {
+                        // 实现时，从新获取UploadAuth
+                        // uploader.resumeUploadWithAuth(uploadAuth);
+                    } else if (isSTSMode()) {
+                        // 实现时，从新获取STS临时账号用于恢复上传
+                        // uploader.resumeUploadWithToken(accessKeyId, accessKeySecret, secretToken, expireTime);
+                    }
+                },
+                // 开始上传
+                'onUploadstarted': function (uploadInfo) {
+                    applyUpload(uploadInfo.file.name);
+                    if (isVodMode()) {
+                        var uploadAuth = document.getElementById("uploadAuth").value;
+                        var uploadAddress = document.getElementById("uploadAddress").value;
+                        uploader.setUploadAuthAndAddress(uploadInfo, uploadAuth, uploadAddress);
+                    }
+                    log("onUploadStarted:" + uploadInfo.file.name + ", endpoint:" + uploadInfo.endpoint + ", bucket:" + uploadInfo.bucket + ", object:" + uploadInfo.object);
+                }
+            });
+
+            var accessKeyId = document.getElementById("accessKeyId").value;
+            var accessKeySecret = document.getElementById("accessKeySecret").value;
+            var secretToken = document.getElementById("secretToken").value;
+            var expireTime = document.getElementById("expireTime").value;
+
+            if (isVodMode()) {
+                // 点播上传。每次上传都是独立的鉴权，所以初始化时，不需要设置鉴权
+                uploader.init();
+            } else if (isSTSMode()) {
+                // OSS直接上传:STS方式，安全但是较为复杂，建议生产环境下使用。
+                // 临时账号过期时，在onUploadTokenExpired事件中，用resumeWithToken更新临时账号，上传会续传。
+                uploader.init(accessKeyId, accessKeySecret, secretToken, expireTime);
+            } else {
+                // OSS直接上传:AK方式，简单但是不够安全，建议测试环境下使用。
+                uploader.init(accessKeyId, accessKeySecret);
+            }
+        };
+
+        document.getElementById("files")
+            .addEventListener('change', function (event) {
+                var endpoint = document.getElementById("endpoint").value;
+                var bucket = document.getElementById("bucket").value;
+                var objectPre = document.getElementById("objectPre").value;
+                var userData;
+                if (isVodMode()) {
+
+                    userData = '{"Vod":{"UserData":"{"IsShowWaterMark":"false","Priority":"7"}"}}';
+                } else {
+
+                    userData = '{"Vod":{"Title":"this is title.我是标题","Description":"this is desc.我是描述","CateId":"19",\
+                "Tags":"tag1,tag2,标签3","UserData":"user data"}}';
+                }
+                var str = "";
+                for (var i = 0; i < event.target.files.length; i++) {
+
+                    str += "<div class=\"control-group\"><label class=\"control-label\">" + event.target.files[i].name + "</label><div class=\"controls\"><div class=\"progress progress-striped\"><div class=\"progress-bar progress-bar-primary\" name=\"processbar" + fileIndex + "\" id=\"processbar" + fileIndex + "\" role=\"progressbar\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width:0%\"><span id=\"bar" + fileIndex + "\">0%</span></div></div></div></div>";
+                    fileIndex++;
+                    log("add file: " + event.target.files[i].name);
+                    //uploader.addFile(event.target.files[i], endpoint, bucket, objectPre + event.target.files[i].name, userData);
+                    if (isVodMode()) {
+                        // 点播上传。每次上传都是独立的OSS object，所以添加文件时，不需要设置OSS的属性
+                        uploader.addFile(event.target.files[i], null, null, null, userData);
+                    } else {
+                        uploader.addFile(event.target.files[i], endpoint, bucket, objectPre + event.target.files[i].name, userData);
+                    }
+                }
+                $("#Progress_Bars").html(str);
+            });
+
+        var textarea = document.getElementById("textarea");
+        function Progress_Bar(progress, bar, processbar) {
+            $("#" + bar).html(progress + "%");
+            $("#" + processbar).attr("style", "width:" + progress + "%");
+        }
+        function start() {
+            if (document.getElementById("description").value != "") {
+                log("start upload.");
+                uploader.startUpload();
+            }
+            else {
+                layer.alert('视频信息不完整');
+            }
+        }
+
+        function stop() {
+            log("stop upload.");
+            uploader.stopUpload();
+        }
+
+        function resumeWithToken() {
+            log("resume upload with token.");
+            var uploadAuth = document.getElementById("uploadAuth").value;
+
+            var accessKeyId = document.getElementById("accessKeyId").value;
+            var accessKeySecret = document.getElementById("accessKeySecret").value;
+            var secretToken = document.getElementById("secretToken").value;
+            var expireTime = document.getElementById("expireTime").value;
+
+            if (isVodMode()) {
+                uploader.resumeUploadWithAuth(uploadAuth);
+            } else if (isSTSMode()) {
+                uploader.resumeUploadWithToken(accessKeyId, accessKeySecret, secretToken, expireTime);
+            }
+        }
+
+        function clearList() {
+            fileIndex = 0;
+            ProgressIndex = 0;
+            $("#Progress_Bars").html("");
+
+            log("clean upload list.");
+            uploader.cleanList();
+
+        }
+
+        function getList() {
+            log("get upload list.");
+            var list = uploader.listFiles();
+            for (var i = 0; i < list.length; i++) {
+                log("file:" + list[i].file.name + ", status:" + list[i].state + ", endpoint:" + list[i].endpoint + ", bucket:" + list[i].bucket + ", object:" + list[i].object);
+            }
+        }
+
+        function deleteFile() {
+            if (document.getElementById("deleteIndex").value) {
+                var index = parseInt(document.getElementById("deleteIndex").value) - 1;
+                log("delete file");
+                // log("delete file index:" + index);
+                uploader.deleteFile(index);
+            }
+        }
+
+        function cancelFile() {
+            if (document.getElementById("cancelIndex").value) {
+                var index = document.getElementById("cancelIndex").value
+                log("cancel file index:" + index);
+                uploader.cancelFile(index);
+            }
+        }
+
+        function resumeFile() {
+            if (document.getElementById("resumeIndex").value) {
+                var index = document.getElementById("resumeIndex").value
+                log("resume file index:" + index);
+                uploader.resumeFile(index);
+            }
+        }
+
+        function clearLog() {
+            textarea.options.length = 0;
+        }
+
+        function log(value) {
+            if (!value) {
+                return;
+            }
+
+            var len = textarea.options.length;
+            if (len > 0 && textarea.options[len - 1].value.substring(0, 40) == value.substring(0, 40)) {
+                textarea.remove(len - 1);
+            } else if (len > 25) {
+                textarea.remove(0);
+            }
+
+            var option = document.createElement("option");
+            option.value = value, option.innerHTML = value;
+            textarea.appendChild(option);
+        }
+
+        function isVodMode() {
+            var uploadAuth = document.getElementById("uploadAuth").value;
+            return (uploadAuth && uploadAuth.length > 0);
+        }
+
+        function isSTSMode() {
+            var secretToken = document.getElementById("secretToken").value;
+            var expireTime = document.getElementById("expireTime").value;
+            if (!isVodMode()) {
+                if (secretToken && secretToken.length > 0 && expireTime && expireTime.length > 0) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        function save(names) {
+            $.ajax({
+                //async: false,
+                type: "post",
+                url: "../aliyunUpload/ashx/VideoUpload.ashx",
+                data: { name: names, videoPath: names, v_table: document.getElementById("v_table").value, courseCatalogId: '0', courseId: document.getElementById("v_id").value, v_id: document.getElementById("v_id").value, parentId: document.getElementById("p_id").value, code: '0', allowListen: '0', recommendListen: '0', auditorId: '0', auditTime: '', auditState: '0', note: '', tag: document.getElementById("tag").value, action: "saveSql" }, //提交表单，vistor.ashx?ID=XXX
+                success: function (msg) {
+                    //alert(msg)
+                    if (msg != "go_login") {
+                        document.getElementById("uploadAddress").value = "";
+                        document.getElementById("uploadAuth").value = "";
+                    }
+                    else {
+                        window.location.href = "../login.html";
+                    }
+                } //操作成功后的操作！msg是后台传过来的值
+                , error: function (ex) {
+                    alert("error");
+                }
+            });
+        }
+        function applyUpload(videoname) {
+            $.ajax({
+                async: false,
+                type: "post",
+                url: "../aliyunUpload/ashx/VideoUpload.ashx",
+                data: { video: videoname, description: document.getElementById("description").value, coverurl: document.getElementById("coverurl").value, action: "get" }, //提交表单，vistor.ashx?ID=XXX
+                success: function (msg) {
+                    //alert(msg)
+                    var arr = new Array();
+                    arr = msg.split('-');
+                    document.getElementById("uploadAddress").value = arr[0];
+                    document.getElementById("uploadAuth").value = arr[1];
+                } //操作成功后的操作！msg是后台传过来的值
+                         , error: function (XMLHttpRequest) {
+                             alert(XMLHttpRequest.responseText);
+                         }
+            });
+        }
+        function winback() {
+            var backurl = $("#fromUrl").val();
+            window.location.href = backurl + ".html?id=" + $("#v_id").val();
+        }
+    </script>
+   
+</body>
+</html>

@@ -1,0 +1,5300 @@
+﻿@charset "UTF-8";body{background-clip:border-box;background-color:#f4f4f4}
+                 .progress {
+    height: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.progress-bar {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    background-color: #428bca;
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
+    -webkit-transition: width .6s ease;
+    transition: width .6s ease;
+}
+
+.progress-striped .progress-bar {
+    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);
+    background-image: linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);
+    background-size: 40px 40px;
+}
+
+.progress.active .progress-bar {
+    -webkit-animation: progress-bar-stripes 2s linear infinite;
+    animation: progress-bar-stripes 2s linear infinite;
+}
+
+.progress-bar-success {
+    background-color: #5cb85c;
+}
+
+.progress-striped .progress-bar-success {
+    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);
+    background-image: linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);
+}
+
+.progress-bar-info {
+    background-color: #5bc0de;
+}
+
+.progress-striped .progress-bar-info {
+    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);
+    background-image: linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);
+}
+
+.progress-bar-warning {
+    background-color: #f0ad4e;
+}
+
+.progress-striped .progress-bar-warning {
+    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);
+    background-image: linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);
+}
+
+.progress-bar-danger {
+    background-color: #d9534f;
+}
+
+.progress-striped .progress-bar-danger {
+    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);
+    background-image: linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);
+}
+.fehidden{
+    display: none !important;
+}
+/*名师工作室3级-视频/照片*/
+.feteacherindex-photo{
+    margin:20px 0;
+    padding: 10px 10px 20px;
+    background: #fff;
+}
+/*.feteacherindex-photo .span4{
+    max-width:290px;
+}*/
+.feteacherindex-photo>h1{
+    margin:0 10px;
+    font-size: 20px;
+    line-height: 1;
+    padding-bottom: 10px;
+    border-bottom:1px solid #ccc;
+}
+.feteacherindex-photo>h1>i{
+    float: left;
+    width:25px;
+    height:22px;
+    background: url("../images/public/public-icon.png") no-repeat -676px -517px;
+    margin-right: 10px;
+}
+.feteacherindex-photo.active>h1>i{
+    float: left;
+    width:25px;
+    height:22px;
+    background: url("../images/public/public-icon.png") no-repeat -646px -517px;
+    margin-right: 10px;
+}
+.feteacherindex-photo>h1>span{
+   font-size: 16px;
+    color:#999;
+}
+/*.feteacherindex-photo .fevediodetail,.feteacherindex-photo .fephotodetail{*/
+    /*padding-bottom: 30px;*/
+/*}*/
+.feteacherindex-photo .fevediodetail .fepanel,.feteacherindex-photo .fephotodetail .fepanel{
+    margin: 20px 10px 0;
+    border: 1px solid #ccc;
+}
+.feteacherindex-photo .fephotodetail .fepanel .feimage{
+	height:200px;
+}
+
+.feteacherindex-photo .fephotodetail .fepanel .feimage img{
+	width: 100%;
+	height: 100%;
+}
+
+.feteacherindex-photo .fevediodetail .fepanel .feimage,.feteacherindex-photo .fephotodetail .fepanel .feimage{
+    position: relative;
+    height: 160px;
+    display:block;
+}
+.feteacherindex-photo .fevediodetail .fepanel .feimage img,.feteacherindex-photo .fephotodetail .fepanel .feimage img{
+    width: 100%;
+    height: 100%;
+}
+.feteacherindex-photo .fevediodetail .fepanel .feimage a,.feteacherindex-photo .fephotodetail .fepanel .feimage a{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,.3);
+    opacity: 0;
+}
+.feteacherindex-photo .fevediodetail .fepanel .feimage a>span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: rgba(255,255,255,.3);
+    border: 1px solid #fff;
+    height: 28px;
+    width: 102px;
+    margin-top: -14px;
+    margin-left: -51px;
+    text-align: center;
+    padding: 0 30px 0 20px;
+    border-radius: 50px;
+    line-height: 28px;
+}
+.feteacherindex-photo .fevediodetail .fepanel .feimage a>span>b{
+    position: absolute;
+    right: 2px;
+    top: 1.5px;
+    width: 23px;
+    height: 23px;
+    background: url(../images/public/public-icon.png) no-repeat -677px -201px;
+}
+.feteacherindex-photo .fevediodetail .fepanel:hover,.feteacherindex-photo .fephotodetail .fepanel:hover {
+    box-shadow: 0 0 3px 3px #eee;
+    cursor: pointer;
+}
+.feteacherindex-photo .fevediodetail .fepanel:hover a,.feteacherindex-photo .fephotodetail .fepanel:hover a{
+    opacity: 1;
+}
+.feteacherindex-photo .fevediodetail .fepanel .febox{
+    margin: 0px 10px 0;
+}
+.feteacherindex-photo .fevediodetail .fepanel .febox h3{
+    margin:0;
+    font-size: 14px;
+    color:#000;
+    line-height: 30px;
+    height: 30px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.feteacherindex-photo .fevediodetail .fepanel .febox h4{
+    margin:0 0 10px;
+    font-size: 14px;
+    color:#a6a6a6;
+}
+.feteacherindex-photo .feloadmore{
+    margin:20px 10px;
+    font-size: 18px;
+    color:#666;
+    text-align: center;
+    border-top:1px solid #ccc;
+    padding: 10px 0;
+}
+.feteacherindex-photo .fephotodetail .fepanel .feimage a>div{
+    position: absolute;
+    top:50%;
+    left:10px;
+    right:10px;
+    color: #fff;
+}
+.feteacherindex-photo .fephotodetail .fepanel .feimage a>div>h6{
+    font-size: 16px;
+}
+.feteacherindex-photo .fephotodetail .fepanel .feimage a>div>p{
+    font-size: 14px;
+    margin-top: 10px;
+}
+.feteacherindex-photo .fephotodetail .fepanel .febox h3{
+    font-size: 16px;
+    color:#000;
+    text-align: center;
+    margin: 10px 0;
+}
+.feteacherindex-photo .fephotodetail .fepanel .febox h4{
+    font-size: 16px;
+    color:#666;
+    text-align: center;
+    margin-bottom: 10px;
+}
+/**************************************/
+/*************个人中心****************/
+/*左侧头部老师信息*/
+.feteachercenterhead{
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 20px;
+    color: #666666;
+    padding-left: 20px;
+    border-left: 1px solid #ccc;
+}
+.feteachercenter{
+    /*background:#eeeeee;*/
+    width: 100%;
+    border:1px solid #ccc;
+    /*padding-bottom: 40px;*/
+    /*padding-top: 20px;*/
+}
+.container1{
+    margin-left:10px;
+    width:98%;
+}
+#leftaside{
+    position: relative;
+}
+.feteacherpersonalcenter-left{
+    width: 280px;
+    position:absolute;
+}
+.feteacherpersonalcenter-left-head{
+    background: #fff;
+    position: relative;
+    height:221px;
+}
+.feteacherpersonalcenter-left-head img{
+    width: 100%;
+    height: 100px;
+}
+.feteacherpersonalcenter-left-head .feteacher-picture{
+    width: 100px;
+    height:100px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    border-radius: 50%;
+    margin-left: -50px;
+    top:50px;
+}
+.feteacherpersonalcenter-left-head .feteacher-picture>b{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,.6);
+    text-align: center;
+    font-size: 12px;
+    height: 20px;
+    color: #fff;
+    z-index: 0;
+
+}
+.feteacherpersonalcenter-left-head .feteacher-picture>input{
+    top:0;
+    bottom:0;
+    left: 0;
+    right:0;
+    z-index:1;
+    position: absolute;
+    opacity: 0;
+    width: 100px;
+    height: 100px;
+    filter:alpha(opacity=0);/* 兼容IE */
+    cursor: pointer;
+}
+.feteacherpersonalcenter-left-head h1{
+    text-align: center;
+    margin-top: 60px;
+    font-size: 18px;
+    font-weight: 700;
+    height: 27px;
+    line-height: 27px;
+}
+.feteacherpersonalcenter-left-head h2{
+    text-align: center;
+    font-size: 16px;
+    padding: 0px 0 10px;
+}
+.feteacherpersonalcenter-left-head h2>a{
+    color: #ff6c00;
+}
+/*左侧导航选项栏*/
+.feteacherpersonalcenter-left-content{
+    background: #fff;
+}
+.feteacherpersonalcenter-left-content>li{
+    margin:0 20px;
+    padding: 10px 0;
+    border-top:1px dashed #ccc ;
+}
+.feteacherpersonalcenter-left-content>li>a{
+    font-size: 18px;
+    color:#000;
+    font-weight: bold;
+    margin-left: 60px;
+    position: relative;
+    display: block;
+}
+
+.feteacherpersonalcenter-left-content>li>a>i{
+    width: 20px;
+    margin-right: 5px;
+    text-align:center;
+}
+.feteacherpersonalcenter-left-content>li>a>b{
+    position: absolute;
+    right: 10px;
+    top:5px;
+}
+.feteacherpersonalcenter-left-content>li .fechild{
+    margin-left:60px;
+}
+.feteacherpersonalcenter-left-content>li .fechild>li{
+    margin-left:30px;
+    padding: 8px 0;
+}
+.feteacherpersonalcenter-left-content>li .fechild>li a{
+    font-size: 16px;
+    color:#666;
+    position: relative;
+}
+.feteacherpersonalcenter-left-content>li .fechild>li a.active{
+    color:#ff6c00;
+}
+.feteacherpersonalcenter-left-content>li .fechild>li a.active::before{
+    display: table;
+    content: "";
+    position: absolute;
+    top: -2px;
+    height: 20px;
+    width: 5px;
+    background: #ff6c00;
+    left: -100px;
+}
+.feteacherpersonalcenter-left-content li a:hover,.feteacherpersonalcenter-left-content li .fechild>li a:hover{
+    color: #ff6c00;
+    cursor: pointer;
+}
+/*右侧内容样式*/
+/*通用标题样式*/
+.feteacherpersonalcenter-right{
+    margin-left: 300px;
+    background: #fff;
+    padding: 0 20px;
+    min-height: 1326px;
+    margin-bottom:100px;
+}
+.feteacherpersonalcenter-right-head{
+    padding: 20px 0px 10px;
+    border-bottom: 1px solid #ccc;
+}
+.feteacherpersonalcenter-right-head>span{
+    line-height: 1;
+}
+.feteacherpersonalcenter-right-head>span>i{
+    line-height: 1;
+    margin-right: 10px;
+}
+.feteacherpersonalcenter-right-head>span:first-child{
+    font-size: 18px;
+    font-weight: bold;
+}
+.feteacherpersonalcenter-right-head>span:nth-child(2){
+    font-size: 16px;
+    color: #666666;
+}
+.feteacherpersonalcenter-right-head>span:nth-child(3){
+    font-size: 16px;
+    color: #666666;
+}
+.feteacherpersonalcenter-right-head>span:nth-child(3) i{
+    font-size: 18px;
+}
+.feteacherpersonalcenter-right-head>span:last-child *{
+    font-size: 14px;
+    color: #ff6c00;
+    margin-left: 20px;
+}
+.feteacherpersonalcenter-right-head>b{
+    font-weight: normal;
+    color: #ff6c00;
+    float: right;
+}
+
+/*个人资料模块*/
+.fepersonaldata-title{
+    border-bottom: 1px dashed #ccc;
+    position: relative;
+    height: 11px;
+    margin: 30px 0;
+}
+.fepersonaldata-title>b{
+    position: absolute;
+    top:0px;
+    font-size: 16px;
+    background: #fff;
+    padding-right: 10px;
+}
+.fepersonaldata-title>span{
+    position: absolute;
+    top:0px;
+    right:0;
+    font-size: 14px;
+    background:#eee;
+    padding: 4px 14px;
+    line-height: 1;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+}
+.fepersonaldata-title>span:hover,.fepersonaldata-title>span.active{
+    background:#2e8ded;
+    cursor: pointer;
+    color:#fff;
+}
+.fepersonaldata{
+    padding-bottom:20px;
+}
+.fepersonaldata .fepanel ul>li{
+    margin: 20px 0;
+    font-size: 14px;
+    position: relative;
+}
+.fepersonaldata .fepanel ul>li>i{
+    font-style: normal;
+    margin-left: 20px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+}
+.fepersonaldata .fepanel ul>li textarea:disabled{
+    border:1px solid transparent;
+    background:#fff;
+    padding:5px 10px;
+}
+.fepersonaldata .fepanel ul>li>span{
+    font-weight: 700;
+    padding-left:20px;
+    width:80px;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    position:relative;
+}
+.fepersonaldata .fepanel ul>li>span h9{
+    position:absolute;
+    top:3px;
+    left:5px;
+}
+.fepersonaldata .fepanel ul>li>input{
+    margin-left: 10px;
+    outline: 0;
+    border: 1px solid #ccc;
+    padding: 4px 10px;
+    border-radius: 5px;
+}
+.fepersonaldata .fepanel ul>li>label{
+    width: 50px;
+    margin-left: 10px;
+    display: inline-block;
+    text-align: center;
+}
+.fepersonaldata .fepanel ul>li>label:hover{
+    cursor: pointer;
+}
+   /*介绍文本框*/
+.fepersonaldata .fepanel ul>li .fetextarea{
+    margin-left: 10px;
+    width: 60%;
+    /*height: 100px;*/
+    /*border: 1px solid #ccc;*/
+    border-radius: 5px;
+    padding: 0 10px;
+    display: inline-block;
+    font-size: 14px;
+    outline: 0;
+}
+.fepersonaldata .fepanel ul li>b{
+    position: relative;
+    top:90px;
+    margin-left: 10px;
+}
+    /*教龄*/
+.fepersonaldata .fepanel ul li>.feseniority,.fepersonaldata .fepanel ul li>.fesubject{
+    width: auto;
+    padding: 2px 2%;
+    margin: 0;
+    margin-left: 40px;
+    border-radius: 5px;
+}
+    /*单位 机构*/
+.fepersonaldata .fepanel ul li>.fecompany{
+    width: 70%;
+}
+    /*过往经历*/
+.fepersonaldata .fepanel ul>li>a{
+    float: right;
+    padding: 2px 10px;
+    border-radius: 5px;
+}
+.fepersonaldata .fepanel ul>li>a i{
+    margin-right: 10px;
+}
+.fepersonaldata .fepanel ul>li>a:hover{
+    background: #ff6c00;
+    color:#fff;
+}
+.fepersonaldata .fepanel .fehistory{
+    /*padding-top: 25px;*/
+}
+.fepersonaldata .fepanel .fehistory .fetext{
+    height: 100px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    outline: 0;
+}
+.fepersonaldata .fepanel .fehistory>.febox{
+    width: 30%;
+    display: inline-block;
+}
+.fepersonaldata .fepanel .fehistory p{
+    margin: 10px 0;
+    font-weight: 700;
+    font-size: 14px;
+}
+.fepersonaldata .fepanel .fehistory>.febox>input{
+    outline: 0;
+    border: 1px solid #ccc;
+    padding: 4px 10px;
+    border-radius: 5px
+}
+.fepersonaldata .fepanel .fehistory>.febox>select{
+    width: auto;
+    padding: 2px 2%;
+    margin: 0;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+.fepersonaldata .fepanel .fepastthing-content{
+    /*padding-top: 25px;*/
+}
+.fepersonaldata .fepanel .fepastthing-content>li{
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.fepersonaldata .fepanel .fepastthing-content>li:hover{
+    background: #f5f5f5;
+}
+.fepersonaldata .fepanel .fepastthing-content>li:hover span{
+    display:inline-block;
+}
+.fepersonaldata .fepanel .fepastthing-content>li h1{
+    font-size: 16px;
+    padding: 10px 0;
+}
+.fepersonaldata .fepanel .fepastthing-content>li p{
+    padding-bottom: 10px;
+}
+.fepersonaldata .fepanel .fepastthing-content>li h1>s{
+    text-decoration: none;
+    margin-left: 20px;
+}
+.fepersonaldata .fepanel .fepastthing-content>li h1>span{
+    float: right;
+    margin-left: 10px;
+    font-size: 14px;
+    padding: 2px 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    outline: 0;
+    border-radius: 5px;
+    display: none;
+    cursor:pointer;
+}
+.fepersonaldata .fepanel .fepastthing-content>li h1>span:hover{
+    color: #fff;
+    background: #ff6c00;
+    border: 1px solid #ff6c00;
+}
+.fepersonaldata .fepanel .feoperation,.feteacherfamily .feoperation {
+    text-align: center;
+    padding: 20px 0 10px;
+}
+
+.fepersonaldata .fepanel .feoperation a:first-child,.feteacherfamily .feoperation a:first-child{
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    /* padding: 10px 50px; */
+    background: #ff6c00;
+    /*line-height: 1;*/
+    outline: 0;
+    border: 1px solid #ff6c00;
+    border-radius: 5px;
+    margin-right: 60px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    /*color:#fff;
+    font-size: 14px;
+    padding:10px 50px;
+    background: #ff6c00;
+    line-height: 1;
+    outline: 0;
+    border: 1px solid #ff6c00;
+    border-radius: 5px;
+    margin-right: 60px;*/
+}
+.fepersonaldata .fepanel .feoperation a:last-child,.feteacherfamily .feoperation a:last-child{
+     color: #000;
+    font-size: 14px;
+    /* padding: 10px 50px; */
+    background: #fff;
+    /* line-height: 1; */
+    outline: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    /*color:#000;
+    font-size: 14px;
+    padding:10px 50px;
+    background: #fff;
+    line-height: 1;
+    outline: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;*/
+}
+.fepersonaldata input:focus{
+    border: 1px solid #ff6c00 !important;
+}
+.fepersonaldata input:disabled{
+    border: 1px solid transparent !important;
+    background: #fff;
+}
+.fepersonaldata .fepanel ul li .feedit,.fepersonaldata .fepanel .fehistory .feedit{
+    border: 1px solid #ccc;
+    height: 100px;
+}
+.fepersonaldata .fepanel ul li .fetextarea:focus,.fepersonaldata .fepanel .fehistory .fetext:focus{
+    border: 1px solid #ff6c00;!important;
+}
+.organ_School {
+    display:inline-block;
+    position:relative;
+    height:30px;
+    min-width:250px;
+    margin-left:40px;
+}
+.organ_School>input{
+    height:30px;
+    border:1px solid #a9a9a9;
+    border-radius:5px;
+    outline:none;
+    padding:2px 5px 2px 10px;
+    box-sizing:border-box;
+    width:100%;
+}
+.organ_School ul {
+    border:1px solid #ccc;
+    display:none;
+    position:absolute;
+    left:0px;
+    right:0px;
+    z-index:11111;
+    top:30px;
+    background:#fff;
+    max-height:186px;
+    overflow-y:auto;
+}
+.organ_School ul>li{
+    padding:5px 0;
+    padding-left:10px;
+    margin:0!important;
+}
+.organ_School ul>li:hover{
+    background:#ff6c00;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:#ccc;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:#ccc;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:#ccc;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:#ccc;
+}
+
+/*视频/照片*/
+.fevideophoto>.febox>h1,.feupdatedata>.febox>h1,.femystudio>.febox>h1{
+    margin:0;
+    line-height:1;
+    padding: 20px 0;
+    border-bottom: 1px dashed #e6e6e6;
+    font-size:16px;
+}
+.fevideophoto>.febox>h1>b,.feupdatedata>.febox>h1>b,.femystudio>.febox>h1>b{
+    font-size: 16px;
+    line-height: 30px;
+    height:30px;
+    display:inline-block;
+}
+.fevideophoto>.febox>h1>span,.feupdatedata>.febox>h1>span{
+    font-size: 14px;
+    padding: 0px 20px;
+    height:30px;
+    line-height:30px;
+    display:inline-block;
+    margin-left: 40px;
+    border-radius: 5px;
+}
+.fevideophoto>.febox>h1>span:hover,.fevideophoto>.febox>h1>span.active,
+.feupdatedata>.febox>h1>span:hover,.feupdatedata>.febox>h1>span.active{
+    background: #ff6c00;
+    color: #fff;
+}
+.fevideophoto>.febox>p,.feupdatedata>.febox>p{
+    padding: 20px 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+.fevideophoto>.febox>p>button,.feupdatedata>.febox>p>button{
+    font-size: 14px;
+    background: #fff;
+    width:100px;
+    height:32px;
+    line-height:30px;
+    outline: 0;
+    color:#008aff;
+    border: 1px solid #008aff;
+    border-radius: 5px;
+}
+.fevideophoto>.febox>p>button>i,.feupdatedata>.febox>p>button>i{
+    margin-right: 10px;
+}
+.fevideophoto>.febox>p>span{
+    float: right;
+    font-size: 14px;
+    color: #666666;
+    height:32px;
+    line-height:32px;
+}
+.fevideophoto .feteacherindex-photo .fephotodetail .fepanel .febox h4{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.fevideophoto .feteacherindex-photo .fephotodetail .fepanel .febox h3,
+.feupdatedata .feteacherindex-photo .fephotodetail .fepanel .febox h3,
+.femystudio .feteacherindex-photo .fephotodetail .fepanel .febox h3{
+    font-size: 14px;
+    margin: 5px 0;
+}
+.fevideophoto .feteacherindex-photo,.feupdatedata .feteacherindex-photo,.femystudio .feteacherindex-photo{
+    padding: 0;
+}
+/*.fevideophoto .feteacherindex-photo .fephotodetail .fepanel .feimage img,*/
+/*.feupdatedata .feteacherindex-photo .fephotodetail .fepanel .feimage img,*/
+/*.femystudio .feteacherindex-photo .fephotodetail .fepanel .feimage img{*/
+    /*width: 100%;*/
+    /*height: 180px;*/
+/*}*/
+.fevideophoto .feteacherindex-photo .fevediodetail .fepanel .feimage img,
+.feupdatedata .feteacherindex-photo .fevediodetail .fepanel .feimage img,
+.femystudio .feteacherindex-photo .fevediodetail .fepanel .feimage img{
+    width: 100%;
+    height: 100%;
+}
+.fevideophoto  .feteacherindex-photo .fepanel,.feupdatedata  .feteacherindex-photo .fepanel,
+.femystudio  .feteacherindex-photo .fepanel{
+    margin: 0px 10px 20px;
+    position: relative;
+    overflow: hidden;
+    border: 0;
+    display: block;
+}
+.fevideophoto  .feteacherindex-photo .fepanel ul,.feupdatedata  .feteacherindex-photo .fepanel ul,
+.femystudio  .feteacherindex-photo .fepanel ul{
+    display: inline-block;
+    position: absolute;
+    top: -63px;
+    right: 20px;
+    z-index:10;
+    transition: all .3s linear;
+}
+.fevideophoto  .feteacherindex-photo .fepanel ul>li,.feupdatedata  .feteacherindex-photo .fepanel ul>li,
+.femystudio  .feteacherindex-photo .fepanel ul>li{
+    padding:5px  11px 5px 14px;
+    background: rgba(214,107,102,.9);
+    color: #fff;
+}
+.fevideophoto  .feteacherindex-photo .fepanel ul>li a,.feupdatedata  .feteacherindex-photo .fepanel ul>li a,
+.femystudio  .feteacherindex-photo .fepanel ul>li a{
+    color: #fff;
+}
+.fevideophoto  .feteacherindex-photo .fepanel ul>li:last-child,.feupdatedata  .feteacherindex-photo .fepanel ul>li:last-child,
+.femystudio  .feteacherindex-photo .fepanel ul>li:last-child{
+    border-top: 1px solid #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.fevideophoto  .feteacherindex-photo .fepanel:hover ul,.feupdatedata  .feteacherindex-photo .fepanel:hover ul,
+.femystudio  .feteacherindex-photo .fepanel:hover ul{
+    top:0;
+}
+ /*添加视频/照片页面样式*/
+.fevideophoto .feaddphoto,.fevideophoto .feaddvideo{
+    min-height:790px;
+}
+.fevideophoto .feaddphoto .fepanel{
+    padding: 10px 0;
+}
+.fevideophoto .feaddphoto .fepanel>span{
+    float: left;
+    font-size: 14px;
+    width: 90px;
+    height:30px;
+    line-height:30px;
+}
+.fevideophoto .feaddphoto .fepanel>input{
+    padding: 4px 10px;
+    outline: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 500px;
+    box-sizing: border-box;
+}
+.fevideophoto .feaddphoto .fepanel>b{
+    margin-left: 10px;
+    font-size: 14px;
+    color: #fe0000;
+    position: relative;
+    top: -10px;
+}
+.fevideophoto .feaddphoto .fepanel>p{
+    padding: 20px 0;
+    text-align: center;
+}
+.fevideophoto .feaddphoto .fepanel>p>button{
+    font-size: 14px;
+    color: #fff;
+    background: #ff6c00;
+    padding: 8px 26px;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+    margin-top: 20px;
+    line-height: 1;
+}
+.fevideophoto .feaddphoto .fepanel>p>a{
+    font-size: 14px;
+    color: #fff;
+    background: #ff6c00;
+    border-radius: 5px;
+    outline: 0;
+    text-align:center;
+    display:inline-block;
+    width:100px;
+    height:30px;
+    line-height:30px;
+    border: 1px solid #ff6c00;
+    text-decoration:none;
+}
+.fevideophoto .feaddphoto .fepanel>p>a:last-child{
+    margin-left:60px;
+    color: #000;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+.fevideophoto .feaddphoto .fepanel>div{
+    display: inline-block;
+    width: 200px;
+    height: 140px;
+    border: 1px dashed #ccc;
+    position: relative;
+    border-radius: 5px;
+    /* background: url(../images/temp/teachercenter-add.jpg)no-repeat center; */
+    overflow: hidden;
+}
+.fevideophoto .feaddphoto .fepanel>div>img{
+    width: 100%;
+    height: 100%;
+}
+.fevideophoto .feaddphoto .fepanel>div>input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 200px;
+    height: 140px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.fevideophoto .feaddvideo p{
+    padding: 20px 0;
+}
+.fevideophoto .feaddvideo p>b{
+    padding: 7px 14px;
+    background: #ff6c00;
+    /*width: 120px;*/
+    position: relative;
+    height: 30px;
+    margin-left: 200px;
+    color:#fff;
+    outline: 0;
+    border-radius: 5px;
+    border: 0;
+    overflow: hidden;
+}
+.fevideophoto .feaddvideo p>b>input{
+    top:0;
+    bottom:0;
+    left: 0;
+    right:0;
+    position: absolute;
+    opacity: 0;
+    width: 86px;
+    height: 30px;
+    filter:alpha(opacity=0);/* 兼容IE */
+    cursor: pointer;
+    /*z-index: 10;*/
+}
+.fevideophoto .feaddvideo p>span{
+    margin-left: 40px;
+    font-size: 14px;
+}
+
+.fevideophoto .feaddvideo>div>span{
+    font-size: 14px;
+    color:#000;
+    font-weight: 600;
+}
+.fevideophoto .feaddvideo>div>input{
+    margin-left: 40px;
+    font-size: 14px;
+    outline: 0;
+    padding: 6px 10px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.fevideophoto .feaddvideo>button{
+    margin-left:50%;
+    font-size: 14px;
+    color:#fff;
+    background: #ff6c00;
+    padding: 8px 26px;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+    margin-top: 20px;
+    line-height: 1;
+}
+.fevideophoto .feaddvideo>a{
+    margin-left:50%;
+    font-size: 14px;
+    color:#fff;
+    background: #ff6c00;
+    padding: 8px 26px;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+    margin-top: 20px;
+    line-height: 1;
+}
+/*上传图片弹框样式*/
+.pop {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    background: rgba(0,0,0,.4);
+}
+.pop-content{
+    /*text-align: center;*/
+    background: white;
+    position: relative;
+    width: 800px;
+    top: 25%;
+    left: 50%;
+    margin-left: -400px;
+    font-size: 14px;
+    border-top: 4px solid #e7eaec;
+    box-shadow: 0 0 30px 2px #666;
+}
+.title {
+    text-align: left;
+    padding: 10px 20px;
+    position: relative;
+    margin: 0;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    font-size: 20px;
+}
+.title s {
+    text-align: center;
+    font-size: 40px;
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    top: 50%;
+    margin-top: -23px;
+    right: 0;
+    text-decoration: none;
+    line-height: 46px;
+}
+.detail{
+    padding: 10px;
+    overflow-x:auto ;
+}
+.detail .continueadd{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background: #f5f5f5;
+    position: relative;
+    float: left;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+.detail .continueadd>div{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    background:url('../images/temp/addphoto.png') no-repeat center;
+    margin: 40px 0 20px;
+}
+.detail .continueadd>h3{
+    color:#999;
+}
+.detail .continueadd input{
+    top:0;
+    bottom:0;
+    left: 0;
+    right:0;
+    position: absolute;
+    opacity: 0;
+    width: 200px;
+    height: 200px;
+    filter:alpha(opacity=0);/* 兼容IE */
+}
+.detail ul{
+    padding-left: 220px;
+    width: auto;
+    white-space: nowrap;
+}
+.detail ul li{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ccc;
+    position: relative;
+    margin-right: 10px;
+}
+.detail ul li div{
+    height: 170px;
+}
+.detail ul li div>input[type=text]{
+    height: 30px;
+    width: 200px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    outline: 0;
+    box-sizing: border-box;
+    text-indent: 10px;
+}
+.bottom-btn{
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: right;
+}
+.bottom-btn button{
+    padding: 5px 10px;
+    outline: 0;
+    border-radius: 5px;
+}
+.bottom-btn button:first-child{
+    border: 1px solid #ccc;
+    background: #fff;
+    margin-right: 20px;
+}
+.bottom-btn button:last-child{
+    border: 1px solid #ff6c00;
+    background: #ff6c00;
+}
+/*弹框*/
+.pop-panel{
+    /*text-align: center;*/
+    background: white;
+    position: relative;
+    width: 800px;
+    top: 25%;
+    left: 50%;
+    margin-left: -400px;
+    font-size: 14px;
+    border-top: 4px solid #e7eaec;
+    box-shadow: 0 0 30px 2px #666;
+    border-radius: 5px;
+}
+.pop-panel i{
+    margin-right: 10px;
+}
+.pop-panel .content{
+    padding: 10px 20px;
+}
+.pop-panel .content h3{
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.pop-panel .content p{
+    text-indent: 2em;
+    margin-bottom: 20px;
+}
+.pop-panel .publisher{
+    font-size: 20px;
+    height: 60px;
+    border-top: 1px solid #ccc;
+    padding: 10px 20px 0;
+    box-sizing: border-box;
+}
+.pop-panel .publisher span:first-child{
+    float: left;
+}
+.pop-panel .publisher span:last-child{
+    float: right;
+}
+/*认证设置*/
+.feauthsetting{
+    /*min-height: 1000px;*/
+}
+.feauthsetting .fepanel{
+    padding: 10px 0 0;
+    border-bottom: 1px solid #ccc;
+}
+.feauthsetting .fepanel h1{
+    font-size: 16px;
+    border-left: 2px solid #ff6c00;
+    color:#000;
+    line-height: 1;
+    padding-left: 5px;
+    margin: 20px 0;
+}
+.feauthsetting .fepanel h1>span{
+    color:#ff6c00;
+    margin-left: 10px;
+}
+.feauthsetting .fepanel h1>span.normal{
+    color:#999;
+}
+.feauthsetting .fepanel>.fetitle{
+    padding: 10px 0;
+    /*background:#fff0d5 ;*/
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.feauthsetting .fepanel>.fetitle:hover,.feauthsetting .fepanel>.fetitle.active{
+    background:#fff0d5 ;
+    border: 1px solid #ff6c00;
+}
+.feauthsetting .fepanel>.fetitle>i{
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-left: 5px;
+    background: url("../images/public/public-icon.png") no-repeat -621px -517px;
+}
+.feauthsetting .fepanel>.fetitle>i.teacher{
+    background: url("../images/public/public-icon.png") no-repeat -597px -515px;
+}
+.feauthsetting .fepanel>.fetitle>i.education{
+    background: url("../images/public/public-icon.png") no-repeat -571px -516px;
+}
+.authsetting .fepanel>.fetitle>i.major{
+    background: url("../images/public/public-icon.png") no-repeat -547px -517px;
+}
+.feauthsetting .fepanel>.fetitle>span{
+    float: left;
+    width: 400px;
+}
+.feauthsetting .fepanel>.fetitle>span>b{
+    color:#999;
+    font-weight: normal;
+}
+.feauthsetting .fepanel>.fetitle>button{
+    float: right;
+    padding: 5px 20px;
+    color:#fff;
+    background: #2e82e0;
+    outline: 0;
+    border: 0;
+    margin-right: 15px;
+    position: relative;
+    top:-3px;
+    border-radius:3px;
+}
+/*认证细节*/
+.feauthsetting .feauth{
+    border-top: 1px solid #ccc;
+    display: none;
+}
+.feauthsetting .feauth .febox{
+    padding: 10px 0;
+    font-size: 14px;
+}
+.feauthsetting .feauth .febox:first-child{
+    padding-top:30px;
+    font-size: 14px;
+}
+.feauthsetting .feauth .febox>span{
+    float: left;
+    width: 150px;
+    text-align: right;
+    margin-right: 20px;
+}
+.feauthsetting .feauth .febox>span>b{
+    color:#ff6c00;
+    margin-right: 5px;
+}
+.feauthsetting .feauth .febox>input{
+    outline: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    padding: 4px 10px;
+}
+.feauthsetting .feauth .febox>.feupdatephoto{
+    float: left;
+    width: 160px;
+    height: 130px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    /*background: #ededed;*/
+}
+.feauthsetting .feauth .febox>.feupdatephoto>h3{
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,.2);
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+.feauthsetting .feauth .febox>.feupdatephoto>img{
+    width: 100%;
+    height: 100%;
+}
+.feauthsetting .feauth .febox>.feupdatephoto>input{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    width: 160px;
+    opacity: 0;
+    z-index: 11;
+    filter:alpha(opacity=0);/* 兼容IE */
+}
+.feauthsetting .feauth .febox>s{
+    text-decoration: none;
+    margin: 0 20px 0 30px;
+    float: left;
+}
+.feauthsetting .feauth .febox>i{
+    display: inline-block;
+    width: 160px;
+    height: 130px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: url("../images/temp/shili1.png") no-repeat center;
+}
+.feauthsetting .feauth .febox>i.back{
+    background: url("../images/temp/shili2.png") no-repeat center;
+}
+.feauthsetting .feauth .febox>b{
+    display: inline-block;
+    width: 500px;
+    height: 80px;
+    padding-top: 50px;
+    border-radius: 5px;
+    margin-left: 50px;
+}
+.feauthsetting .feauth h2{
+    text-align: center;
+    padding: 20px 0;
+}
+.feauthsetting .feauth h2>a:first-child{
+    outline: 0;
+    border: 1px solid #ff6c00;
+    padding: 4px 40px;
+    color:#fff;
+    background: #ff6c00;
+    margin-right: 30px;
+    border-radius: 5px;
+}
+.feauthsetting .feauth h2>a:last-child{
+    outline: 0;
+    border: 1px solid #ccc;
+    padding: 4px 40px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+/*资料上传*/
+.feupdatedata .feaddcourseware,.feupdatedata .feaddarticle{
+    min-height: 900px;
+}
+.feupdatedata .feaddcourseware .febox,.feupdatedata .feaddarticle .febox,.feaddstudioinformation .febox{
+    margin: 20px 0;
+}
+.feupdatedata .feaddcourseware .febox>span,.feupdatedata .feaddarticle .febox>span,.feaddstudioinformation .febox>span{
+    float: left;
+    height:30px;
+    line-height:30px;
+    font-size: 14px;
+    width: 90px;
+}
+.feupdatedata .feaddcourseware .febox>input,.feupdatedata .feaddarticle .febox>input,.feaddstudioinformation .febox>input{
+    padding: 4px 10px;
+    outline: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 500px;
+    box-sizing: border-box;
+}
+.feupdatedata .feaddcourseware .febox>b,.feupdatedata .feaddarticle .febox>b,.feaddstudioinformation .febox>b{
+    margin-left: 10px;
+    font-size: 14px;
+    color: #fe0000;
+    position: relative;
+    top:-10px;
+}
+.feupdatedata .feaddcourseware .febox>div,.feupdatedata .feaddarticle .febox>div,.feaddstudioinformation .febox>div{
+    display: inline-block;
+    width: 200px;
+    height: 120px;
+    border: 1px dashed #ccc;
+    position: relative;
+    border-radius: 5px;
+    /*background: url("../images/temp/teachercenter-add.jpg")no-repeat center;*/
+    overflow: hidden;
+}
+.feupdatedata .feaddcourseware .febox>div img,.feupdatedata .feaddarticle .febox>div img,.feaddstudioinformation .febox>div img{
+    width: 100%;
+    height: 100%;
+}
+.feupdatedata .feaddcourseware .febox>div>input,.feupdatedata .feaddarticle .febox>div>input,
+.feaddstudioinformation .febox>div>input{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    width: 200px;
+    height:120px;
+    opacity: 0;
+    filter:alpha(opacity=0);/* 兼容IE */
+}
+.feupdatedata .feaddcourseware .febox>div>input:hover,.feupdatedata .feaddarticle .febox>div>input:hover,
+.feaddstudioinformation .febox>div>input:hover{
+    cursor: pointer;
+}
+.feupdatedata .feaddcourseware .febox textarea,.feupdatedata .feaddarticle .febox textarea,
+.feaddstudioinformation .febox textarea{
+    width: 500px;
+    height: 200px;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.feupdatedata .feaddcourseware .febox>h2,.feupdatedata .feaddarticle .febox>h2,
+.feaddstudioinformation .febox>h2{
+    text-align: center;
+    padding-bottom: 100px;
+}
+.feupdatedata .feaddcourseware .febox>h2>a,.feupdatedata .feaddarticle .febox>h2>a,
+.feaddstudioinformation .febox>h2>a{
+    text-align: center;
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    color:#fff;
+    background: #ff6c00;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+    display: inline-block;
+}
+.feupdatedata .feaddcourseware .febox>a{
+    text-align: center;
+    width: 80px;
+    height: 30px;
+    line-height: 28px;
+    font-size: 14px;
+    color:#fff;
+    background: #ff6c00;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+    margin-left: 10px;
+    position: relative;
+    display: inline-block;
+}
+.feupdatedata .feaddcourseware .febox>a>input{
+    position: absolute;
+    top:0;
+    bottom:0;
+    height:30px;
+    width: 80px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+}
+/*我的工作室*/
+.femystudio>.febox>h1>a{
+    float: right;
+    height:30px;
+    line-height:30px;
+    width:120px;
+    color:#008aff;
+    border: 1px solid #008aff;
+    border-radius: 5px;
+    background: #fff;
+    font-size: 14px;
+    text-align:center;
+}
+.femystudio>.febox>h1>a>i{
+    margin-right: 10px;
+}
+/*已加入工作室*/
+.fejoinedstudio{
+    padding-bottom: 40px;
+}
+.fejoinedstudio>.fetitle{
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px dashed #e6e6e6;
+    height: 20px;
+    line-height:1;
+}
+.fejoinedstudio>.fetitle span{
+    font-size: 16px;
+    color:#000;
+    font-weight: bold;
+}
+.fejoinedstudio>ul>li{
+    margin-top: 20px;
+    height: 211px;
+}
+.fejoinedstudio>ul>li h3{
+    font-size: 16px;
+    padding: 10px 0;
+    line-height: 1;
+}
+.fejoinedstudio>ul>li .feimage{
+    height: 175px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.fejoinedstudio>ul>li .feimage img{
+    width: 100%;
+    height: 100%;
+}
+.fejoinedstudio>ul>li .febox{
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    line-height: 180px;
+    margin: auto;
+}
+.fejoinedstudio>ul>li .span8{
+    text-align: center;
+}
+.fejoinedstudio>ul>li .febox>a{
+    display:inline-block;
+    width:120px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+}
+.fejoinedstudio>ul>li .febox>a:first-child{
+    background: #ff6c00;
+    color:#fff;
+    margin-right: 15px;
+}
+.fejoinedstudio>ul>li .febox>a:last-child{
+    background: #e6e6e6;
+    color:#333333;
+}
+/*创建工作室*/
+.fecreatestudio>h1{
+    font-size: 16px;
+    color:#000;
+    font-weight: bold;
+    margin: 20px 0 10px;
+}
+.fecreatestudio .fepanel,.febasicinformation .fepanel{
+    margin-bottom: 20px;
+}
+.fecreatestudio .fepanel>span,.febasicinformation .fepanel>span{
+    font-size: 14px;
+    float:left;
+    padding-top: 4px;
+}
+.fecreatestudio .fepanel>select,.febasicinformation .fepanel>select{
+    width: auto;
+    padding: 3px 2%;
+    margin: 0 20px;
+    border-radius: 5px;
+}
+.fecreatestudio .fepanel>.feimage{
+    width: 140px;
+    height: 140px;
+    margin: 0 20px;
+    display: inline-block;
+    /*border: 1px dashed #ccc;*/
+    border-radius: 3px;
+    box-sizing: border-box;
+    /*background: url("../images/temp/createstudio.png") no-repeat center;*/
+    position: relative;
+}
+.fecreatestudio .fepanel>.feimage img,.febasicinformation .fepanel>.feimage img{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius:5px;
+}
+.fecreatestudio .fepanel>.feimage s{
+    display:block;
+    background:url("../images/temp/createstudio.png") no-repeat center;
+    background-size:100% 100% !important;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius:5px;
+}
+#studiohead {
+    display: block;
+    background: url(../images/temp/createstudio.png) no-repeat center;
+    background-size: 100% 100% !important;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.fecreatestudio .fepanel>.feimage input,.febasicinformation .fepanel>.feimage input{
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    width: 140px;
+    opacity: 0;
+    cursor: pointer;
+    filter:alpha(opacity=0);/* 兼容IE */
+}
+.fecreatestudio .fepanel>b,.febasicinformation .fepanel>b{
+    position: relative;
+    bottom:5px;
+    color: #fe0000;
+}
+.fecreatestudio .fepanel>input,.febasicinformation .fepanel>input{
+    /*width: auto;*/
+    padding: 4px 0px;
+    outline: 0;
+    margin: 0 20px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    width: 250px;
+}
+.fecreatestudio .fepanel>textarea,.febasicinformation .fepanel>textarea{
+    /*width: auto;*/
+    padding: 4px;
+    width:600px;
+    height:160px;
+    display:inline-block;
+    margin: 0 20px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+.fecreatestudio .fepanel>textarea:disabled,.febasicinformation .fepanel>textarea:disabled{
+    /*width: auto;*/
+    background:#fff;
+    border: 1px solid transparent;
+}
+.fecreatestudio .fepanel>input:disabled,.febasicinformation .fepanel>input:disabled{
+    border: 1px solid transparent !important;
+    background: #fff;
+}
+.fecreatestudio .femenber .feaddmender,.femymenber .femenber .feaddmender{
+    height: 150px;
+    background: #ff6c00;
+    margin: 0 5px 15px;
+    border: 1px dashed #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background: url("../images/temp/addmenber.jpg") no-repeat center;
+}
+.fecreatestudio .femenber .femenber-content,.femymenber .femenber .femenber-content{
+    margin: 0 5px 15px;
+    border: 1px solid #ccc;
+    padding: 20px 5px;
+    border-radius: 5px;
+    height: 150px;
+    box-sizing: border-box;
+}
+.fecreatestudio .femenber .femenber-content .span5,.femymenber .femenber .femenber-content .span5{
+    text-align: center;
+}
+.fecreatestudio .femenber .femenber-content h5,.femymenber .femenber .femenber-content h5{
+    font-size: 16px;
+    margin: 0;
+}
+.fecreatestudio .femenber .femenber-content h4,.femymenber .femenber .femenber-content h4{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.fecreatestudio .femenber .femenber-content h6,.femymenber .femenber .femenber-content h6{
+    font-size: 14px;
+    color: #999999;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+.fecreatestudio .femenber .femenber-content button,.femymenber .femenber .femenber-content button{
+    font-size: 14px;
+    color: #fff;
+    line-height: 30px;
+    width: 105px;
+    height: 30px;
+    text-align: center;
+    background: #ff6c00;
+    border: 0;
+    outline: 0;
+    border-radius: 3px;
+}
+.fecreatestudio .femenber .femenber-content button>i,.femymenber .femenber .femenber-content button>i{
+    margin-right: 10px;
+}
+.fecreatestudio .femenber .femenber-content .feimage,.femymenber .femenber .femenber-content .feimage{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+}
+.fecreatestudio>p{
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+.fecreatestudio>p>a{
+    height: 30px;
+    line-height: 30px;
+    width:100px;
+    text-align: center;
+    color: #fff;
+    background: #ff6c00;
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+    display: inline-block;
+}
+/*我的工作室详细页面*/
+.femystudiodetail .fetabs{
+    height: 45px;
+}
+.femystudiodetail .fetabs li{
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.femystudiodetail .fetabs li>span{
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 3px solid transparent;
+    padding-bottom: 10px;
+}
+.femystudiodetail .fetabs li>span.active,.femystudiodetail .fetabs li>span:hover{
+    color:#ff6c00;
+    border-bottom: 3px solid #ff6c00;
+    cursor: pointer;
+}
+    /*基本信息*/
+.febasicinformation{
+    padding-top: 30px;
+    position: relative;
+}
+.febasicinformation .fepanel>.feimage{
+    width: 140px;
+    height: 140px;
+    margin: 0 10px;
+    display: inline-block;
+    border-radius: 3px;
+    box-sizing: border-box;
+    /*background: url("../images/temp/createstudio.png") no-repeat center;*/
+    position: relative;
+}
+.febasicinformation>button{
+    position: absolute;
+    right: 20px;
+    top:30px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    text-align: center;
+    background: #ff6c00;
+    color: #fff;
+}
+.febasicinformation>button>i{
+    margin-right: 10px;
+}
+.febasicinformation>p{
+    margin-top: 40px;
+    text-align: center;
+}
+.febasicinformation .fepanel>s{
+    font-size: 14px;
+    text-decoration: none;
+    margin-left: 20px;
+    position: relative;
+    top:4px;
+}
+.febasicinformation>p>button{
+    height: 30px;
+    line-height: 30px;
+    width:160px;
+    text-align: center;
+    color: #fff;
+    background: #ff6c00;
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+}
+.febasicinformation>p>a{
+    display:inline-block;
+    height: 30px;
+    line-height: 30px;
+    width:160px;
+    text-align: center;
+    color: #fff;
+    background: #ff6c00;
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+}
+    /*咨询*/
+.feconsultation{
+    display: none;
+    padding-top: 20px;
+}
+.feconsultation .fepanel{
+    margin: 0px 10px 20px;
+    position: relative;
+    overflow: hidden;
+    border: 0;
+}
+.feconsultation .fepanel ul{
+    display: inline-block;
+    position: absolute;
+    top: -63px;
+    right: 20px;
+    transition: all .3s linear;
+}
+.feconsultation .fepanel ul>li{
+    padding: 5px 11px 5px 14px;
+    background: rgba(214,107,102,.9);
+    color: #fff;
+}
+.feconsultation .fepanel ul>li:last-child{
+    border-top: 1px solid #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.feconsultation .fepanel .feimage img{
+    width: 100%;
+    height: 175px;
+}
+.feconsultation .fepanel .febox{
+    margin: 0px 10px 0;
+}
+.feconsultation .fepanel .febox h3{
+    font-size: 14px;
+    color: #000;
+    margin: 10px 0;
+}
+.feconsultation .fepanel:hover{
+    box-shadow: 0 0 3px 3px #eee;
+    cursor: pointer;
+}
+.feconsultation .fepanel:hover ul{
+    top: 0;
+}
+.feconsultation .feaddconsultation{
+    height: 175px;
+    border: 1px dashed #ccc;
+    box-sizing: border-box;
+    margin:0 10px 21px;
+    position: relative;
+    background: url("../images/temp/addstudiozx.png")no-repeat center;
+}
+    /*我的成员*/
+.femymenber{
+    display: none;
+    margin-top: 20px;
+}
+    /*公告*/
+.feannouncement{
+    display: none;
+    margin: 0 10px;
+}
+.feannouncement>p{
+    margin: 20px 0px;
+}
+.feannouncement>p>button{
+    height: 30px;
+    line-height: 30px;
+    width:120px;
+    text-align: center;
+    color: #fff;
+    background: #ff6c00;
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+}
+.feannouncement>p>button>i{
+    margin-right: 10px;
+}
+
+.feannouncement-content{
+    font-size: 14px;
+}
+.feannouncement>div:nth-child(2n){
+    background: #fafafa;
+}
+.feannouncement-title{
+     font-weight: bold;
+     font-size: 16px;
+     background: #fff !important;
+ }
+.feannouncement-title,.feannouncement-content{
+    display: table;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    text-indent: 10px;
+}
+.feannouncement-title .fetitle,.feannouncement-content .fetitle{
+    display: table-cell;
+    width:40%;
+}
+.feannouncement-content .fetitle:hover{
+    color:#008aff ;
+    cursor: pointer;
+}
+.feannouncement-title .fepublisher,.feannouncement-content .fepublisher{
+    display: table-cell;
+    width:22%;
+}
+.feannouncement-title .fetime,.feannouncement-content .fetime{
+    display: table-cell;
+    width:22%;
+}
+.feannouncement-title .feoperation,.feannouncement-content .feoperation{
+    display: table-cell;
+    width:16%;
+    text-align: center;
+}
+.feannouncement-content .feoperation>button{
+    outline: 0;
+    border: 0;
+    background: none;
+}
+.feannouncement-content .feoperation>button:hover{
+    color:#008aff ;
+}
+.fenodata-nobg{
+    width: 100%;
+    height:260px;
+    background: url("../images/temp/nodata.png") no-repeat center ;
+    background-size:contain;
+}
+.fenodata{
+    /*width: 100%;*/
+    height:260px;
+    background: url("../images/temp/nodata.png") no-repeat center #fff;
+    background-size:contain;
+}
+
+
+
+
+.dycpop{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    background: rgba(0,0,0,.7);
+    z-index: 1;
+}
+.dycpop b{
+    position: fixed;
+    top:90px;
+    right: 80px;
+    font-size: 60px;
+    color:#000;
+    z-index: 100;
+    background: #fff;
+    line-height: 60px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.dycpop b:hover{
+    cursor: pointer;
+    background: #ff6c00;
+    color: #fff;
+}
+.dycpop i{
+    font-size: 60px;
+    position: fixed;
+    bottom: 80px;
+    left: 40%;
+    z-index: 100;
+    color:#ff6c00;
+}
+.dycpop s{
+    font-size: 60px;
+    position: fixed;
+    bottom: 80px;
+    left: 60%;
+    z-index: 100;
+    color:#ff6c00;
+}
+.dycpop img{
+    position: absolute;
+    top:50%;
+    left: 50%;
+}
+
+/*老师个人中心-订单管理*/
+.feordermanage{
+    /*padding: 0 20px;*/
+}
+.feordermanage .feorder-nav{
+    padding: 20px 0;
+    /*border-bottom: 1px dashed #ccc;*/
+}
+.feordermanage .feorder-nav span{
+    font-size: 14px;
+    border-radius: 5px;
+    display:inline-block;
+    margin-right: 40px;
+    width:100px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+}
+.feordermanage .feorder-nav span.active,.feordermanage .feorder-nav span:hover{
+    background: #ff6c00;
+    color:#fff;
+    cursor: pointer;
+}
+.feordermanage .feorder-body{
+    padding: 0 0 20px;
+}
+.feordermanage .feorder-body .feorder-title{
+    font-size: 14px;
+    border-bottom: 1px solid #e6e6e6;
+    border-top: 1px solid #e6e6e6;
+    background: #f5f5f5;
+    height: 48px;
+    line-height:46px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.feordermanage .feorder-body .feorder-content li{
+    height: 149px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+.feordermanage .feorder-body .pp li{
+    height: 220px;
+    padding: 10px 0;
+}
+.feordermanage .feorder-body .feorder-content li>p{
+    line-height: 30px;
+    height: 30px;
+}
+.feordermanage .feorder-body .feorder-content li>p>span{
+    font-size: 14px;
+    margin-left:10px;
+    margin-right: 80px;
+}
+.feordermanage .feorder-body .feorder-content li .feimage{
+    padding: 0 10px;
+    height: 115px;
+    text-align:center;
+}
+.feordermanage .feorder-body .pp li .feimage{
+    padding: 0 10px;
+    height: 165px;
+}
+.feordermanage .feorder-body .feorder-content li .feimage h2{
+    line-height: 1;
+    font-size: 14px;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+    background:#f5f5f5;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.feordermanage .feorder-body .feorder-content li .feimage img{
+    width:245px;
+    display:block;
+    height: 100%;
+}
+.feordermanage .feorder-body .feorder-content li>div{
+    text-align: center;
+    height: 149px;
+    line-height: 149px;
+}
+.feordermanage .feorder-body .pp li>div{
+    text-align: center;
+    height: 165px;
+    line-height: 165px;
+}
+.feordermanage .feorder-body .feorder-content li button{
+    padding: 0px 10px;
+    font-size: 14px;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #666666;
+}
+.feordermanage .feorder-body .feorder-content li button:hover{
+    color: #008aff;
+}
+.feordermanage .feorder-body .feorder-content li div>span{
+    color: #ff6c00;
+    font-size: 16px;
+}
+.feordermanage .feorder-body .feorder-content li div>b{
+    color: #666;
+    font-size: 14px;
+    font-weight: normal;
+}
+.feaddcourse{
+    margin: 20px;
+}
+.feaddcourse a{
+    display:inline-block;
+    width:100px;
+    height:30px;
+    text-align:center;
+    line-height:30px;
+    font-size: 14px;
+    background: #fff;
+    outline: 0;
+    color: #008aff;
+    border: 1px solid #008aff;
+    border-radius: 5px;
+}
+.feaddcourse a>i{
+    margin-right: 10px;
+}
+/*老师中心头部*/
+.fe-header-top-bar1{
+    line-height: 40px;
+    color: #fff;
+    background-color: #474747;
+}
+.fe-header-top-bar a{
+    color:white;
+}
+.fe-header-top-other1{
+    text-align: right;
+    height: 40px;
+}
+.fe-header-top-other1 span{
+    float: left;
+    margin-left: 60px;
+}
+.fe-header-top-other1 a{
+    color:#fff;
+}
+.fe-header-top-other1 a:last-child{
+    margin-right: 40px;
+}
+/*添加直播节目*/
+.feaddcourseview{
+    padding: 20px 0;
+}
+.feaddcourseview .feaddcourseview-title{
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.feaddcourseview .feaddcourseview-title span{
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    background: #ff6c00;
+    padding: 5px 15px;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+.feaddcourseview .feaddcourseview-title span b{
+    width: 11px;
+    height: 10px;
+    bottom: -10px;
+    left: 15px;
+    position: absolute;
+    background: url("../images/temp/bottom-sj.png") no-repeat center;
+}
+.feaddcourseview .fepanel{
+    border-bottom: 1px dashed #ccc;
+    margin-bottom: 20px;
+}
+.feaddcourseview .fepanel .addfile{
+    width:120px;
+    height:30px;
+    border:1px solid #ccc;
+    position:relative;
+    background:#f5f5f5;
+    border-radius:5px;
+    line-height:30px;
+    text-align:center;
+    margin-bottom:20px;
+}
+.feaddcourseview .fepanel .addfile input{
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    bottom:0;
+    left: 0;
+    width: 120px;
+    height: 30px;
+    filter: alpha(opacity=0);
+    cursor: pointer
+}
+.feaddcourseview .fepanel .febox{
+    margin: 20px 0;
+}
+.feaddcourseview .fepanel .febox>span{
+    float: left;
+    font-size: 14px;
+    height:30px;
+    line-height:30px;
+    width: 90px;
+}
+.feaddcourseview .fepanel .febox>input[type=text]{
+    padding: 4px 10px;
+    outline: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+    box-sizing: border-box;
+    margin-right: 15px;
+}
+.feaddcourseview .fepanel .febox>input.longth{
+    width: 500px;
+}
+.feaddcourseview .fepanel .febox>input[type=checkbox]{
+    margin-left: 30px;
+}
+.feaddcourseview .fepanel .febox>label{
+    font-size: 14px;
+    color: #000;
+    padding-left: 10px;
+}
+.feaddcourseview .fepanel .febox textarea{
+    width: 500px;
+    height: 200px;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.feaddcourseview .fepanel .febox select{
+    border-radius: 5px;
+    padding: 2px 2%;
+    margin:auto;
+}
+.feaddcourseview .fepanel .febox>div{
+    display: inline-block;
+    width: 200px;
+    height: 140px;
+    border: 1px dashed #ccc;
+    position: relative;
+    border-radius: 5px;
+    /* background: url(../images/temp/teachercenter-add.jpg)no-repeat center; */
+    overflow: hidden;
+}
+.feaddcourseview .fepanel .febox>div img{
+    width: 100%;
+    height: 100%;
+}
+.feaddcourseview .fepanel .febox>div>input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 200px;
+    height: 140px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.feaddcourseview .fepanel .fesave{
+    margin: 20px 0;
+    text-align: center;
+}
+.feaddcourseview .fepanel .fesave button{
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #fff;
+    background: #ff6c00;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+    display: inline-block;
+}
+.feaddcourseview .fepanel .fesave a{
+    text-align: center;
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #fff;
+    background: #ff6c00;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+    display: inline-block;
+}
+.addcourseoutline{
+    background: #f5f5f5;
+    padding: 30px 15px 10px;
+    margin-bottom: 20px;
+}
+.addcourseoutline>span{
+    float: left;
+    font-size: 14px;
+    width: 90px;
+}
+.addcourseoutline .addcourseoutline-content{
+    padding-left: 100px;
+}
+.addcourseoutline .addcourseoutline-content .fepart{
+    padding: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    float: left;
+    width: 300px;
+    background: #fff;
+    position: relative;
+    margin:0 10px 20px;
+}
+.addcourseoutline .addcourseoutline-content .fepart>i{
+    position: absolute;
+    font-size: 16px;
+    border-radius: 50%;
+    top: 4px;
+    right: 8px;
+    border: 1px solid #ccc;
+    font-style: normal;
+    line-height: 1;
+    width: 16px;
+    color: #ccc;
+    text-align: center;
+}
+.addcourseoutline .addcourseoutline-content .fepart .feitem{
+    margin: 10px 0;
+
+}
+.addcourseoutline .addcourseoutline-content .fepart .feitem>span{
+    background: #2e82e0;
+    color: #fff;
+    width: 40px;
+    float: left;
+    font-size: 14px;
+    height: 42px;
+    border-radius: 3px;
+    text-align: center;
+    margin-right: 10px;
+}
+.addcourseoutline .addcourseoutline-content .fepart .feitem>span.fewhite{
+    background: #fff;
+    color: #2e82e0;
+    line-height: 42px;
+}
+.addcourseoutline .addcourseoutline-content .fepart .feitem>span>b{
+    display: inline-block;
+    width: 40px;
+}
+.addcourseoutline .addcourseoutline-content .fepart .feitem input{
+    padding:10px;
+    outline: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    box-sizing: border-box;
+}
+.addcourseoutline .addcourseoutline-content .fepart .feitem select{
+    width: auto;
+    padding: 10px 30px;
+    margin: 0;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+.addcourseoutline .addcourseoutline-content .fepart .feitem button{
+    padding: 5px 15px;
+    color: #008aff;
+    border: 1px solid #008aff;
+    border-radius: 5px;
+    font-size: 14px;
+    position: relative;
+    background: #fff;
+    width: 200px;
+    margin: 0 50px;
+}
+.addcourseoutline .addcourseoutline-content .fepart .feitem button>input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 200px;
+    height: 32px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.addcourseoutline .addcourseoutline-content .fepart .feitem button>input:hover{
+    cursor: pointer;
+}
+.addnewpart{
+    width: 300px;
+    height: 136px;
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+    float: left;
+    margin:0 10px 20px;
+    background: url("../images/temp/teachercenter-add.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+.feaddcourseview .fepublish{
+    text-align: center;
+}
+.feaddcourseview .fepublish button{
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #fff;
+    background: #e6e6e6;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+    display: inline-block;
+}
+/*分页样式*/
+.pagenationbox{
+    padding-left: 0;
+    padding: 50px 0;
+    text-align: center;
+    position: absolute;
+    bottom:0;
+    right: 0;
+    left: 0;
+}
+.pagenationbox li {
+    display: inline-block;
+    margin: 0 5px;
+}
+.pagenationbox li a {
+    padding: .5rem 1rem;
+    display: inline-block;
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #ff6c00;
+}
+.pagenationbox li.active a {
+    background: #ff6c00;
+    color: #fff;
+}
+.pagenationbox li a:hover {
+    background: #eee;
+}
+.feordermanage .feorder-body .feorder-content-40{
+    text-align: center;
+}
+.feordermanage .feorder-body .feorder-content-40 li{
+    height: 40px;
+    padding: 10px 0;
+    border-bottom: 1px solid #CCCCCC;
+    /*line-height: 40px;*/
+}
+.feordermanage .feorder-body .feorder-content-40 li div:not(.span3){
+    height: 40px;
+    line-height: 40px;
+}
+.feordermanage .feorder-body .feorder-content-40 li a {
+    height: 40px;
+    overflow: hidden;
+    line-height: 40px;
+    display: block;
+    padding: 0 10px;
+}
+.feordermanage .feorder-body .feorder-content-40 li a>span{
+    line-height: 1.45;
+    display: inline-block;
+}
+.feordermanage .feorder-body .feorder-content-40 li button{
+    padding: 0px 10px;
+    font-size: 14px;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #666666;
+}
+.feordermanage .feorder-body .feorder-content-40 li button:hover{
+    color: #008aff;
+}
+
+.feorder-head{
+    padding: 20px 0;
+    margin: 0 20px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.feorder-head>span{
+    padding:5px 10px;
+    background: #ff6c00;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/*!*学生个人中心-我的课程*! 兼老师 家校互动*/
+
+.festudentmycourse .fehead,.feteacherfamily .fehead{
+    padding: 20px 0;
+    border-bottom: 1px dashed #ccc;
+    font-size: 16px;
+}
+.festudentmycourse .fehead>span,.feteacherfamily .fehead>span{
+   display: inline-block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+.festudentmycourse .fehead>span:hover,.festudentmycourse .fehead>span.active,
+.feteacherfamily .fehead>span:hover,.feteacherfamily .fehead>span.active{
+    background: #ff6c00;
+    color: #fff;
+    cursor: pointer;
+}
+.festudentmycourse .feselect ul li,.feteacherfamily .feselect>ul>li{
+    display: inline-block;
+    width: 33%;
+    padding: 20px 0;
+}
+.festudentmycourse .feselect ul li span,.feteacherfamily .feselect>ul>li>span{
+    font-weight: 700;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    width: 40px;
+}
+.feteacherfamily .feselect>ul>li>span{
+    width: 80px;
+}
+.festudentmycourse .feselect ul li input,.feteacherfamily .feselect>ul>li>input{
+    margin-left: 10px;
+    outline: 0;
+    border: 1px solid #ccc;
+    padding: 4px 10px;
+    border-radius: 5px;
+}
+.festudentmycourse .feselect ul li select,.feteacherfamily .feselect>ul>li>select{
+    width: auto;
+    padding: 2px 2%;
+    margin: 0;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+.festudentmycourse .feselect .feoperation,.feteacherfamily .feselect>.feoperation{
+   margin: 10px 0 30px;
+    text-align: center;
+}
+.festudentmycourse .feselect .feoperation button,.feteacherfamily .feselect>.feoperation button{
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    line-height: 28px;
+    outline: none;
+    border: 1px solid #ff6c00;
+    background: #ff6c00;
+    color: #fff;
+    border-radius: 5px;
+}
+.festudentmycourse .feselect .feoperation button:last-child,.feteacherfamily .feselect .feoperation button:last-child{
+    margin-left: 40px;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #000;
+}
+.festudentmycourse .fecontent .fetitle,.feteacherfamily .fecontent .fetitle{
+    font-size: 14px;
+    border-bottom: 1px solid #e6e6e6;
+    border-top: 1px solid #e6e6e6;
+    background: #f5f5f5;
+    line-height:46px;
+    height: 48px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.festudentmycourse .fecontent .felist,.feteacherfamily .fecontent .felist{
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #ccc;
+}
+.festudentmycourse .fecontent .felist>div,.feteacherfamily .fecontent .felist>div{
+    height: 60px;
+}
+
+.festudentmycourse .fecontent .felist a{
+    text-align: center;
+    height: 60px;
+}
+/*.feteacherfamily .fecontent .felist .span3>a{
+    text-align: left;
+    height: 60px;
+    display: inline-block;
+    line-height: 1.5;
+    padding: 10px 5px;
+    overflow: hidden;
+    box-sizing: border-box;
+}*/
+.festudentmycourse .fecontent .felist a.bulecolor,.feteacherfamily .fecontent .felist a.bulecolor,.feordermanage .feorder-content  a.bulecolor{
+    color: #00a2d4;
+}
+.festudentmycourse .fecontent .felist a.bulecolor:hover,.feteacherfamily .fecontent .felist a.bulecolor:hover,.feordermanage .feorder-content  a.bulecolor:hover{
+    color: #0b79f5;
+}
+/*创建班级弹框样式*/
+#addallschool h1,#addtrainschool h1{
+    padding: 20px 40px 0;
+}
+#addallschool>ul>li,#addtrainschool>ul>li{
+    margin: 20px 0;
+    font-size: 14px;
+    position: relative;
+    padding: 0 40px;
+}
+#addallschool>ul>li>span,#addtrainschool>ul>li>span{
+    font-weight: 700;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    width: 40px;
+}
+#addallschool>ul>li>select{
+    width: auto;
+    padding: 3px 2%;
+    margin: 0;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+#addtrainschool>ul>li>input{
+    margin-left: 10px;
+    outline: 0;
+    border: 1px solid #ccc;
+    padding: 4px 10px;
+    border-radius: 5px;
+}
+#addallschool>.feoperation,#addtrainschool>.feoperation{
+    text-align: center;
+    padding: 20px 0;
+}
+#addallschool>.feoperation>button,#addtrainschool>.feoperation>button{
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ff6c00;
+    border-radius: 5px;
+    background: #ff6c00;
+    color: #fff;
+}
+#addallschool>.feoperation>button:last-child,#addtrainschool>.feoperation>button:last-child{
+    margin-left: 20px;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #000;
+}
+/*班级信息样式*/
+.feclassdetail>p{
+    padding: 20px;
+    border-bottom: 1px dashed #ccc;
+}
+.feclassdetail>p>span{
+    font-size: 16px;
+    margin-right: 100px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid transparent;
+}
+.feclassdetail>p>span.active,.feclassdetail>p>span:hover{
+    color: #ff6c00;
+    cursor: pointer;
+    border-bottom: 3px solid #ff6c00;
+}
+.feclassdetail .feschoolmsg{
+    padding: 20px;
+}
+.feclassdetail .feschoolmsg>li{
+    padding: 10px 0;
+    font-size: 14px;
+}
+.feclassdetail .feschoolmsg>li>span{
+    margin-right: 20px;
+}
+.feclassdetail .festudentmsg{
+    padding: 20px 0 0;
+}
+.feclassdetail .festudentmsg .fetitle{
+    font-size: 14px;
+    line-height:46px;
+    border-bottom: 1px solid #e6e6e6;
+    border-top: 1px solid #e6e6e6;
+    background: #f5f5f5;
+    height: 48px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.feclassdetail .festudentmsg .fecontent li{
+    text-align: center;
+    height: 80px;
+    line-height: 80px;
+    border-bottom: 1px solid #ccc;
+}
+.feclassdetail .festudentmsg .fecontent .feimage img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.feclassdetail .festudentmsg .fecontent button{
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #ccc;
+    width: 100px;
+    background: #ff6c00;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    color: #fff;
+}
+.feclassdetail .festudentmsg>p{
+    margin-bottom: 20px;
+    padding-left: 20px;
+    position: relative;
+}
+.feclassdetail .festudentmsg>p>input{
+    outline: 0;
+    border: 1px solid #ccc;
+    padding: 4px 10px;
+}
+.feclassdetail .festudentmsg>p>button{
+    width: 40px;
+    height: 30px;
+    outline: none;
+    border: none;
+    position: absolute;
+    left: 194px;
+    background: url("../images/public/public-icon.png") no-repeat -671px -136px #ff6c00;
+}
+.feteacherfamily .feselect>ul>li>svg{
+    left: 240px !important;
+    right:auto !important;
+}
+/*老师个人中心-消息管理*/
+.femessage-head>p{
+    padding:20px 0;
+    border-bottom: 1px dashed #e6e6e6;
+}
+.femessage-head>p>b{
+    font-size:16px;
+    color:#000000;
+    font-weight: normal;
+    margin-right: 20px;
+}
+.femessage-head>p>a{
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    margin-right: 20px;
+    position: relative;
+}
+.femessage-head>p>a:hover,.femessage-head>p>a.active{
+    background:#ff6c00;
+    cursor: pointer;
+    color: #fff;
+}
+.femessage-head>p>a>i{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #00a8e6;
+    top: -5px;
+    right: 5px;
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    font-style: normal;
+}
+.femessage-head .feselect{
+    padding: 20px 0;
+}
+.femessage-head .feselect>b{
+    font-size: 14px;
+    font-weight: normal;
+    margin-right: 20px;
+}
+.femessage-head .feselect>span{
+    font-size: 14px;
+    font-weight: normal;
+    margin-right: 20px;
+}
+.femessage-head .feselect>span.active,.femessage-head .feselect>span:hover{
+    color: #ff6c00;
+    cursor: pointer;
+}
+.femessage-head .feselect>p{
+    display: inline-block;
+    margin-left: 60px;
+}
+.femessage-head .feselect>p>button{
+    outline: none;
+    border: none;
+    padding: 0 10px;
+    background: #fff;
+    color:#666;
+}
+.femessage-head .feselect>p>button:hover{
+    color: #ff6c00;
+}
+.femessage-head .feselect>p>button:first-child{
+    margin-right: 10px;
+}
+.femessage-head .feselect>p>button:last-child{
+    margin-left: 10px;
+}
+.textoverflow{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    width: 100%;
+}
+/*老师消息管理-答疑回复*/
+.feansweringreply .fetitle{
+    padding: 10px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #e6e6e6;
+    border-top: 1px solid #e6e6e6;
+    background: #f5f5f5;
+    height: 48px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.feansweringreply .felist{
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #e6e6e6;
+    color: #000000 !important;
+}
+.feansweringreply .felist.graybg *{
+   color:#aaa;
+}
+.feansweringreply{
+    padding-top:20px;
+}
+.min-height-550{
+    min-height: 550px!important;
+}
+/*老师消息管理-答疑回复详情*/
+.answeringreplydetail{
+    padding: 10px;
+}
+.answeringreplydetail>h1{
+    font-size: 16px;
+    padding: 10px 0;
+}
+.answeringreplydetail>h1>span{
+    margin-right: 40px;
+}
+.answeringreplydetail>ul{
+    height: 200px;
+    overflow-y: auto;
+    background: #f5f5f5;
+    margin: 10px 0;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+.answeringreplydetail>ul>p{
+    padding: 5px 0 2px;
+    margin: 0;
+    text-align: center;
+}
+.answeringreplydetail>ul>p>button{
+    color: #00a0e9;
+    background: #f5f5f5;
+    outline: none;
+    border: none;
+}
+.answeringreplydetail>ul>p>button>i{
+    margin-right: 5px;
+}
+.answeringreplydetail>ul>li{
+    margin: 10px 0;
+}
+.orange{
+    color: #ff6c00;
+}
+.bulebg{
+    background: #00b7ee !important;
+    color: #fff !important;
+}
+.answeringreplydetail>ul>li>span,.answeringreplydetail .fetitle>span{
+    width: 60px;
+    float: left;
+    font-size: 14px;
+    margin-right: 10px;
+}
+.answeringreplydetail>ul>li>div,.answeringreplydetail .fetitle>div{
+    padding-left: 70px;
+    display: block;
+    font-size: 14px;
+}
+.answeringreplydetail .fehuifu{
+    display: table;
+    width: 100%;
+}
+.answeringreplydetail .fehuifu>span{
+    width: 60px;
+    margin-right: 10px;
+    font-size: 14px;
+    float: left;
+}
+.answeringreplydetail .fehuifu>textarea{
+    margin-left: 70px;
+    display: block;
+    font-size: 14px;
+    height: 100px;
+    width: 672px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+.answeringreplydetail .fehuifu>div{
+    margin-left: 70px;
+    display: block;
+    font-size: 14px;
+    height: 120px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+.answeringreplydetail .feoperation{
+    text-align: center;
+    padding: 20px;
+}
+.answeringreplydetail .feoperation>button{
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    border:1px solid #ff6c00;
+    background: #ff6c00;
+    color: #fff;
+    border-radius: 5px;
+}
+.answeringreplydetail .feoperation>button:last-child{
+    border:1px solid #ccc;
+    background: #fff;
+    color: #000;
+    margin-left: 20px;
+}
+.feansweringreply .felist>div {
+    height: 60px;
+}
+.blue{
+    color:#00a0e9;
+}
+.festudentmycourse .feselect>p{
+    padding: 20px 0;
+    text-align: right;
+}
+.festudentmycourse .feselect>p>button{
+    outline: 0;
+    border: 1px solid #008aff;
+    width: 100px;
+    height: 30px;
+    line-height: 28px;
+    border-radius: 5px;
+    background: #fff;
+    color: #008aff;
+    text-align: center;
+    float: left;
+    margin-right:20px;
+}
+.festudentmycourse .feselect>p>button>i{
+    margin-right: 5px;
+}
+.festudentmycourse .feselect>p select{
+
+    width: auto;
+    padding: 3px 2%;
+    margin: 0;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+.festudentmycourse .feselect>p span{
+    margin-left: 50px;
+}
+/*创建试卷样式*/
+.createtestpaper{
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+.createtestpaper>li{
+    float: left;
+    width: 50%;
+    padding: 10px 0;
+}
+.createtestpaper>li:first-child{
+    width: 100%;
+}
+.createtestpaper>li:nth-child(2){
+    width: 100%;
+}
+.createtestpaper>li>span{
+    text-align: right;
+    width: 70px;
+    display: inline-block;
+}
+.createtestpaper>li>svg{
+    position: absolute;
+    left: 230px;
+}
+.createtestpaper>li>label:hover{
+    cursor: pointer;
+}
+.createtestpaper>li>select,.createtestpaper-content .felist select{
+    width: auto;
+    padding: 2px 2%;
+    margin: 0;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+.createtestpaper>li>input[type=text],.createtestpaper-content .felist input{
+    margin-left: 10px;
+    outline: 0;
+    border: 1px solid #ccc;
+    padding: 4px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.createtestpaper>li>input[type=checkbox]{
+    margin: 0 10px;
+}
+.createtestpaper-content{
+    padding: 0 10px;
+}
+.createtestpaper-content .fetitle{
+    text-align: center;
+    background: #f5f5f5;
+    padding: 8px 0;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+.createtestpaper-content>p{
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+.createtestpaper-content>p>button{
+    outline: 0;
+    border: 1px solid #008aff;
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    background: #fff;
+    color: #008aff;
+    text-align: center;
+    float: left;
+}
+.createtestpaper-content>p>button>i{
+    margin-right: 5px;
+}
+.createtestpaper-content>p>span{
+    margin-left: 20px;
+    color: #999;
+}
+.createtestpaper-content>p>span:hover{
+    color: #ff6c00;
+    cursor: pointer;
+}
+.createtestpaper-content .fepanel{
+    /*min-height: 200px;*/
+}
+.createtestpaper-content .felist{
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+.createtestpaper-content .feoperation{
+    text-align: center;
+    padding: 20px 0;
+}
+.createtestpaper-content .feoperation button:first-child{
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background: #ff6c00;
+    border: 1px solid #ff6c00;
+    color: #fff;
+    display: inline-block;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+.createtestpaper-content .feoperation button:last-child{
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background: #fff;
+    border: 1px solid #ccc;
+    color: #000;
+    border-radius: 5px;
+    display: inline-block;
+}
+.testpaper .fepanel ul{
+    background: #fff;
+    padding: 15px;
+    /*margin-bottom: 50px;*/
+}
+.testpaper .fepanel ul li{
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.testpaper .fepanel ul li .fetitle{
+    font-size: 18px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    cursor: context-menu;
+}
+.testpaper .fepanel ul li .fetitle a{
+    display: inline-block;
+    font-size: 22px;
+    padding-left: 0;
+}
+.testpaper .fepanel ul li .fetitle span{
+    font-size: 18px;
+    display: inline-block;
+    width: 14px;
+}
+.testpaper .fepanel ul li .fetitle button{
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color:#fff;
+    font-size: 16px;
+    background: #00b7ee;
+    margin-left: 50px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    display: inline-block;
+}
+.testpaper .fepanel ul li .fecontent{
+    border: 2px solid transparent;
+    border-radius: 5px;
+}
+.testpaper .fepanel ul li .option{
+    font-size: 20px;
+    margin-right: 10px;
+    float: left;
+}
+.testpaper .fepanel ul li .fecontent.active {
+    color: #ff8331;
+    border: 2px solid #00b7ee;
+}
+.testpaper .fepanel ul li .answer-btn {
+    width: 120px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 0px 20px;
+    color: #fff;
+    font-size: 20px;
+    margin: 30px 0 15px 5px;
+    height: 35px;
+    line-height: 35px;
+}
+.testpaper .fepanel ul li .btn-green {
+    background: #27b76f;
+}
+.testpaper .fepanel ul li .btn-orange {
+    background: #ff8331;
+    margin-top: 20px;
+}
+.testpaper .fepanel ul li .feanalysis {
+    line-height: 2rem;
+    padding-left: 30px;
+    font-size: 16px;
+}
+.addnewPop{
+    padding: 20px 0;
+}
+.festudentlearningnote .feselect>p>button,.addnewPop>button{
+    outline: 0;
+    border: 1px solid #008aff;
+    width: 100px;
+    height: 30px;
+    line-height: 28px;
+    border-radius: 5px;
+    background: #fff;
+    color: #008aff;
+    text-align: center;
+}
+.festudentlearningnote .feselect>p>button>i,.addnewPop>button>i{
+    margin-right: 10px;
+}
+/*新增会议*/
+.addmeeting{
+    padding: 10px;
+}
+.addmeeting>li{
+    padding: 10px 0;
+}
+.addmeeting>li select{
+    padding: 3px 2%;
+    margin:auto;
+    border-radius:5px;
+}
+.addmeeting>li svg{
+    position:absolute;
+    left:260px;
+}
+.addmeeting>li>span{
+    float: left;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+}
+.addmeeting>li input{
+    outline: 0;
+    border: 1px solid #ccc;
+    padding: 4px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 200px;
+}
+.addmeeting>li textarea{
+    margin-left: 80px;
+    display: block;
+    font-size: 14px;
+    height: 100px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+.addmeeting .feoperation{
+    text-align: center;
+    padding: 10px;
+}
+.addmeeting .feoperation>button:first-child{
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    line-height: 28px;
+    background: #ff6c00;
+    border-radius: 5px;
+    border: 1px solid #ff6c00;
+    color: #fff;
+    margin-right: 50px;
+}
+.addmeeting .feoperation>button:last-child{
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    line-height: 28px;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: #000;
+}
+/*学生作业完成情况*/
+.completesituation .fetitle{
+    padding: 10px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #e6e6e6;
+    border-top: 1px solid #e6e6e6;
+    background: #f5f5f5;
+    height: 48px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.completesituation .felist{
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #ccc;
+}
+.completesituation .felist>div{
+    height: 60px;
+}
+.completesituation .felist a{
+    text-align: center;
+    height: 60px;
+}
+.red {
+    color:red;
+}
+.blue {
+    color: #00a2d4;
+}
+.femygroupdetail{
+    /*padding: 20px 0;*/
+    padding-bottom: 160px;
+}
+.femygroupdetail>ul{
+    padding: 20px 0;
+    border-bottom: 1px dashed #e6e6e6;
+}
+.femygroupdetail>ul span{
+    font-size: 16px;
+    font-weight: 600;
+}
+.femygroupdetail>ul li{
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 20px;
+}
+.femygroupdetail>ul li.active,.femygroupdetail>ul li:hover{
+    background: #ff6c00;
+    color: #fff;
+    cursor: pointer;
+}
+.mycreategrouppost .feselect{
+    padding: 20px 0;
+    position: relative;
+}
+.mycreategrouppost .feselect select{
+    width: auto;
+    padding: 3px 5%;
+    margin: 0;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+.mycreategrouppost .feselect input{
+    position: absolute;
+    right: 0;
+    border: 1px solid #ccc;
+    padding: 4px 10px;
+    border-radius: 5px;
+    padding-right: 30px;
+    background: url("../images/temp/communitysearch.png") no-repeat 95% center;
+}
+.fecommunitytable .fetitle{
+    font-size: 14px;
+    line-height:46px;
+    border-bottom: 1px solid #e6e6e6;
+    border-top: 1px solid #e6e6e6;
+    background: #f5f5f5;
+    height: 48px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.fecommunitytable .felist-big{
+    text-align: center;
+    height: 80px;
+    line-height: 80px;
+    border-bottom: 1px solid #ccc;
+}
+.fecommunitytable .felist-big img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.fecommunitytable .felist-big>div{
+    height: 80px;
+}
+.fecommunitytable .felist-big a{
+    text-align: center;
+    height: 80px;
+}
+.fecommunitytable .felist{
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #ccc;
+}
+.fecommunitytable .felist>div{
+    height: 60px;
+}
+.fecommunitytable .felist a{
+    text-align: center;
+    height: 60px;
+}
+/*学生个人中心-安全设置*/
+.feverificationCode{
+    border: 1px solid #ff6c00;
+}
+
+/*找回密码*/
+.bindphone{
+    display: inline-block;
+    margin: 0 auto;
+}
+.fesecuritysetting>h1{
+    padding: 20px 0 5px;
+    border-bottom: 1px dashed #ccc;
+}
+.fesecuritysetting .fechangeNav{
+    padding: 20px ;
+}
+.fesecuritysetting .fechangeNav>span{
+    font-size: 16px;
+    margin:5px 20px;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+}
+.fesecuritysetting .fechangeNav>span:first-child{
+    margin-right: 70px;
+}
+.fesecuritysetting .fechangeNav > span:hover, .fesecuritysetting .fechangeNav > span.active {
+    cursor: pointer;
+    border-bottom: 2px solid #00a8e6;
+}
+.fesecuritysetting .fepanel>p {
+    text-align: center;
+    font-size: 14px;
+    padding: 20px 0;
+    color: #999;
+}
+.fesecuritysetting .fepanel>ul>li {
+    margin: 20px 0;
+    font-size: 14px;
+    position: relative;
+}
+.fesecuritysetting .fepanel ul>li>span {
+    font-weight: 700;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    width: 80px;
+}
+.fesecuritysetting .fepanel ul>li>input {
+    margin-left: 40px;
+    outline: 0;
+    border: 1px solid #ccc;
+    padding: 4px 10px;
+    border-radius: 5px;
+}
+.fesecuritysetting .fepanel ul>li>s {
+    margin-left: 20px;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    color: #333;
+    position: absolute;
+}
+.fesecuritysetting .fepanel .feoperation {
+    text-align: center;
+    padding: 20px 0 ;
+}
+.fesecuritysetting .fepanel .feoperation a:first-child {
+    color: #fff;
+    font-size: 14px;
+    /* padding: 10px 50px; */
+    width: 100px;
+    line-height: 30px;
+    height: 30px;
+    display: inline-block;
+    background: #ff6c00;
+    outline: 0;
+    border: 1px solid #ff6c00;
+    border-radius: 5px;
+    margin-right: 60px;
+}
+.fesecuritysetting .fepanel .feoperation a:last-child {
+    color: #000;
+    font-size: 14px;
+    width: 100px;
+    height: 30px;
+    display: inline-block;
+    background: #fff;
+    line-height: 30px;
+    outline: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.fesecuritysetting .fepanel ul>li>s {
+    margin-left: 20px;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    color: #333;
+    position: absolute;
+}
+.fesecuritysetting .fepanel ul>li>button {
+    margin-left: 20px;
+    height: 30px;
+    line-height: 30px;
+    background: #2e82e0;
+    padding: 0 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: #fff;
+}
+.fesecuritysetting .fepanel ul>li>button:hover {
+    background: #0b79f5;
+}
+/*添加评价*/
+.addcoursecomment{
+    padding: 20px;
+}
+.addcoursecomment h1{
+    line-height: 1;
+    font-size: 14px;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+.addcoursecomment .fepanel{
+    padding: 10px 0;
+    width: 100%;
+}
+.addcoursecomment .fepanel>span{
+    float: left;
+    width: 40px;
+}
+.addcoursecomment .fepanel>b{
+    margin-left: 20px;
+    color: #ff6c00;
+}
+.addcoursecomment .fepanel>ul{
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+.addcoursecomment .fepanel>ul li{
+    float: left;
+    width: 14px;
+    height: 14px;
+    margin: 0 5px;
+    background: url("../images/temp/score-star-0.png")no-repeat center;
+    cursor: pointer;
+}
+.addcoursecomment .fepanel>ul li.fullstar{
+    background: url("../images/temp/score-star-10.png")no-repeat center;
+}
+.addcoursecomment .fepanel textarea{
+     margin-left: 60px;
+     display: block;
+     height: 160px;
+     width: 400px;
+    padding: 5px;
+    border-color: #e6e6e6;
+    border-radius: 3px;
+}
+.addcoursecomment .feoperation{
+    text-align: center;
+    padding: 10px 0 0;
+}
+.addcoursecomment .feoperation button:first-child{
+    width: 100px;
+    height: 30px;
+    outline: 0;
+    line-height: 28px;
+    border: 1px solid #ff6c00;
+    background: #ff6c00;
+    color:#fff;
+    font-size: 14px;
+    margin-right: 40px;
+    border-radius: 5px;
+}
+.addcoursecomment .feoperation button:last-child{
+    width: 100px;
+    height: 30px;
+    outline: 0;
+    line-height: 28px;
+    border: 1px solid #ccc;
+    background: #fff;
+    color:#000;
+    font-size: 14px;
+    border-radius: 5px;
+}
+/*老师端需要*/
+.fequestionList-content .fepanel{
+    border-bottom: 1px solid #e6e6e6;
+}
+.fequestionList-content .fetitle{
+    padding: 20px 0 10px;
+    /*line-height: 1;*/
+    font-size: 14px;
+    color: #000;
+}
+.fequestionList-content .fetitle button{
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    outline: none;
+    border: none;
+    background: #30d88d;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    float: right;
+}
+.fequestionList-content .fetitle i{
+    float: right;
+    font-size: 26px;
+    color: #666;
+    margin-left: 20px;
+}
+.fequestionList-content .fetitle i:hover{
+    color: #ff6c00;
+    cursor: pointer;
+}
+.fequestionList-content .fetitle button:hover{
+    background: #12ae68;
+}
+.fequestionList-content .feoption{
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1;
+    padding-left: 20px;
+}
+.fequestionList-content .feanswer{
+    text-align: right;
+    padding: 20px 0;
+    color: #999;
+}
+.fequestionList-content .feanswer button{
+    width: 80px;
+    height: 24px;
+    line-height: 24px;
+    outline: none;
+    border: none;
+    background: #30d88d;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    float: left;
+}
+.fequestionList-content .feanswer button:hover{
+    background: #12ae68;
+}
+.fequestionList-content .feanswer>span{
+    margin-right: 20px;
+}
+.fequestionList-content .feanswer>a{
+    margin-left: 20px;
+    color: #FF6c00;
+}
+/*.fequestionList-content .fetitle .answer{*/
+    /*display: inline-block;*/
+    /*width: 20px;*/
+/*}*/
+.fequestionList-content .feoption:hover{
+    cursor: pointer;
+    color: #FF6c00;
+}
+.fequestionList-content .ferightanswer{
+    display: none;
+}
+.fequestionList-content .ferightanswer>div{
+    padding: 10px 0 20px;
+}
+.fequestionList-content .ferightanswer>p>span{
+    background: #27b76f;
+    border-radius: 3px;
+    padding: 2px 10px;
+    color: #fff;
+}
+/*老师布置作业详情*/
+.feteacherfamily .feselect>p{
+    padding-bottom: 20px;
+    text-align: right;
+}
+.feteacherfamily .feselect>p a{
+    width: 100px;
+    height: 30px;
+    display: inline-block;
+    border: 1px solid #ff6c00;
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+    color: #ff6c00;
+    margin-right: 20px;
+}
+.feteacherfamily .feselect>p a i{
+    margin-right: 6px;
+}
+.feteacherfamily .feselect>p span{
+    width: 30px;
+    height: 30px;
+    float: right;
+    font-size: 26px;
+    color: #666;
+    padding-top: 4px;
+}
+.feteacherfamily .feselect>p span:hover{
+    color: #ff6c00;
+    cursor: pointer;
+}
+.tikuselect{
+    padding: 0 10px 160px 10px;
+    display: none;
+    position: relative;
+}
+.addnewtimu{
+    padding: 0 20px;
+    display: none;
+}
+.addnewtimu .fetitle>h4,.addnewtimu .feanswer>h4{
+    font-size: 16px;
+    color: #000;
+    padding: 20px 0;
+    line-height: 1;
+}
+.addnewtimu .fetitle>h4>span,.addnewtimu .feanswer>h4>span{
+    font-size: 14px;
+    color: #666;
+    margin-left: 40px;
+    line-height: 1;
+}
+.addnewtimu .fetitle>h4>span.active,.addnewtimu .fetitle>h4>span:hover,
+.addnewtimu .feanswer>h4>span.active,.addnewtimu .feanswer>h4>span:hover{
+    color: #ff6c00;
+    cursor: pointer;
+}
+.addnewtimu .fetitle textarea{
+    width: 550px;
+    height: 70px;
+    padding: 10px;
+    border-color:#ccc;
+    border-radius: 5px;
+    display: none;
+}
+.addnewtimu .fetitle h5{
+    font-size: 16px;
+    color: #000;
+    margin-left: 20px;
+    line-height: 1;
+}
+.addnewtimu .fetitle select{
+    margin:20px 20px 0;
+    padding: 2px 2%;
+    border-radius: 5px;
+}
+.addnewtimu .fetitle .feimage{
+    width: 550px;
+    height: 70px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+}
+.addnewtimu .fetitle .feimage img,.addnewtimu .fetimuanalysis .feimage img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.addnewtimu .fetitle .feimage input,.addnewtimu .fetimuanalysis .feimage input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 580px;
+    height: 70px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+}
+.addnewtimu .feanswer .fefonttype .febox{
+    padding: 10px 0;
+    font-size: 14px;
+}
+.addnewtimu .feanswer .fefonttype .febox>span,.addnewtimu .feanswer .fephototype .febox>span{
+    margin-right: 20px;
+}
+.addnewtimu .feanswer .fefonttype .febox>span i,.addnewtimu .feanswer .fephototype .febox>span i{
+    margin-right: 10px;
+    color: #999;
+}
+.addnewtimu .feanswer .fephototype .febox{
+    display: inline-block;
+    width: 49%;
+    padding-bottom: 10px;
+}
+.addnewtimu .feanswer .fephototype .febox b{
+    font-size: 26px;
+}
+.addnewtimu .feanswer .fephototype .febox .feimage{
+    display: inline-block;
+    width: 240px;
+    height: 45px;
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.addnewtimu .feanswer .fephototype .febox .feimage img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.addnewtimu .feanswer .fephototype .febox .feimage input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 240px;
+    height:45px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+}
+.addnewtimu .feanswer .fefonttype .febox input{
+    width: 600px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding:6px 10px;
+}
+.addnewtimu .feanswer .fefonttype .febox b{
+    float: right;
+    margin-top: 4px;
+    font-size: 26px;
+    cursor: pointer;
+}
+.addnewtimu .feanswer .fefonttype .febox b:hover,.addnewtimu .feanswer .fephototype .febox b:hover{
+    color: #ff6c00;
+    cursor: pointer;
+}
+.addnewtimu .fetimusort,.addnewtimu .fetimudifficulty,.addnewtimu .fetimuanalysis{
+    font-size: 16px;
+    color: #000;
+    padding: 10px 0 10px;
+    line-height: 1;
+}
+.addnewtimu .fetimusort>span,.addnewtimu .fetimudifficulty>span{
+    margin-right: 20px;
+    width: 90px;
+    display: inline-block;
+}
+.addnewtimu .fetimusort>span i,.addnewtimu .fetimudifficulty>span i,.addnewtimu .fetimuanalysis>span i{
+    margin-right: 10px;
+    color: #999;
+}
+.addnewtimu .fetimusort>select,.addnewtimu .fetimudifficulty>select{
+    padding: 2px 2%;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+.addnewtimu .fetimuanalysis>span{
+    float: left;
+    width: 90px;
+}
+.addnewtimu .fetimuanalysis .feimage{
+    margin-left: 115px;
+    width: 570px;
+    height: 70px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+}
+.addnewtimu .feoperation{
+    text-align: center;
+    padding: 20px 0;
+}
+.addnewtimu .feoperation a{
+    width: 100px;
+    height: 30px;
+    display: inline-block;
+    background: #ff6c00;
+    color: #fff;
+    border-radius: 5px;
+    line-height: 30px;
+}
+/*老师端需要*/
+.fequestionList-content .fepanel{
+    border-bottom: 1px solid #e6e6e6;
+}
+.fequestionList-content .fetitle{
+    padding: 20px 0 10px;
+    /*line-height: 1;*/
+    font-size: 18px;
+    color: #000;
+}
+.fequestionList-content .fetitle button{
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    outline: none;
+    border: none;
+    background: #30d88d;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    float: right;
+}
+.fequestionList-content .fetitle i{
+    float: right;
+    font-size: 26px;
+    color: #666;
+    margin-left: 20px;
+}
+.fequestionList-content .fetitle i:hover{
+    color: #ff6c00;
+    cursor: pointer;
+}
+.fequestionList-content .fetitle button:hover{
+    background: #12ae68;
+}
+.fequestionList-content .feoption{
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1;
+    padding-left: 20px;
+}
+.fequestionList-content .feanswer{
+    text-align: right;
+    padding: 20px 0;
+    color: #999;
+}
+.fequestionList-content .feanswer button{
+    width: 80px;
+    height: 24px;
+    line-height: 24px;
+    outline: none;
+    border: none;
+    background: #30d88d;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    float: left;
+}
+.fequestionList-content .feanswer button:hover{
+    background: #12ae68;
+}
+.fequestionList-content .feanswer>span{
+    margin-right: 20px;
+}
+.fequestionList-content .feanswer>a{
+    margin-left: 20px;
+    color: #FF6c00;
+}
+/*.fequestionList-content .fetitle .answer{*/
+    /*display: inline-block;*/
+    /*width: 20px;*/
+/*}*/
+.fequestionList-content .feoption:hover{
+    cursor: pointer;
+    color: #FF6c00;
+}
+.fequestionList-content .ferightanswer{
+    display: none;
+}
+.fequestionList-content .ferightanswer>div{
+    padding: 10px 0 20px;
+}
+.fequestionList-content .ferightanswer>p>span{
+    background: #27b76f;
+    border-radius: 3px;
+    padding: 2px 10px;
+    color: #fff;
+}
+/*老师布置作业详情*/
+.feteacherfamily .feselect>p{
+    padding-bottom: 20px;
+    text-align: right;
+}
+.feteacherfamily .feselect>p a{
+    width: 100px;
+    height: 30px;
+    display: inline-block;
+    border: 1px solid #ff6c00;
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+    color: #ff6c00;
+    margin-right: 20px;
+}
+.feteacherfamily .feselect>p a i{
+    margin-right: 6px;
+}
+.feteacherfamily .feselect>p span{
+    width: 30px;
+    height: 30px;
+    float: right;
+    font-size: 26px;
+    color: #666;
+    padding-top: 4px;
+}
+.feteacherfamily .feselect>p span:hover{
+    color: #ff6c00;
+    cursor: pointer;
+}
+.tikuselect{
+    padding: 0 10px 160px 10px;
+    display: none;
+    position: relative;
+}
+.addnewtimu{
+    padding: 0 20px;
+    display: none;
+}
+.addnewtimu .fetitle>h4,.addnewtimu .feanswer>h4{
+    font-size: 16px;
+    color: #000;
+    padding: 20px 0;
+    line-height: 1;
+}
+.addnewtimu .fetitle>h4>span,.addnewtimu .feanswer>h4>span{
+    font-size: 14px;
+    color: #666;
+    margin-left: 40px;
+    line-height: 1;
+}
+.addnewtimu .fetitle>h4>span.active,.addnewtimu .fetitle>h4>span:hover,
+.addnewtimu .feanswer>h4>span.active,.addnewtimu .feanswer>h4>span:hover{
+    color: #ff6c00;
+    cursor: pointer;
+}
+.addnewtimu .fetitle textarea{
+    width: 550px;
+    height: 70px;
+    padding: 10px;
+    border-color:#ccc;
+    border-radius: 5px;
+    display: none;
+}
+.addnewtimu .fetitle h5{
+    font-size: 16px;
+    color: #000;
+    margin-left: 20px;
+    line-height: 1;
+}
+.addnewtimu .fetitle select{
+    margin:20px 20px 0;
+    padding: 2px 2%;
+    border-radius: 5px;
+}
+.addnewtimu .fetitle .feimage{
+    width: 550px;
+    height: 70px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+}
+.addnewtimu .fetitle .feimage img,.addnewtimu .fetimuanalysis .feimage img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.addnewtimu .fetitle .feimage input,.addnewtimu .fetimuanalysis .feimage input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 580px;
+    height: 70px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+}
+.addnewtimu .feanswer .fefonttype .febox{
+    padding: 10px 0;
+    font-size: 14px;
+}
+.addnewtimu .feanswer .fefonttype .febox>span,.addnewtimu .feanswer .fephototype .febox>span{
+    margin-right: 20px;
+}
+.addnewtimu .feanswer .fefonttype .febox>span i,.addnewtimu .feanswer .fephototype .febox>span i{
+    margin-right: 10px;
+    color: #999;
+}
+.addnewtimu .feanswer .fephototype .febox{
+    display: inline-block;
+    width: 49%;
+    padding-bottom: 10px;
+}
+.addnewtimu .feanswer .fephototype .febox b{
+    font-size: 26px;
+}
+.addnewtimu .feanswer .fephototype .febox .feimage{
+    display: inline-block;
+    width: 240px;
+    height: 45px;
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.addnewtimu .feanswer .fephototype .febox .feimage img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.addnewtimu .feanswer .fephototype .febox .feimage input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 240px;
+    height:45px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+}
+.addnewtimu .feanswer .fefonttype .febox input{
+    width: 600px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding:6px 10px;
+}
+.addnewtimu .feanswer .fefonttype .febox b{
+    float: right;
+    margin-top: 4px;
+    font-size: 26px;
+    cursor: pointer;
+}
+.addnewtimu .feanswer .fefonttype .febox b:hover,.addnewtimu .feanswer .fephototype .febox b:hover{
+    color: #ff6c00;
+    cursor: pointer;
+}
+.addnewtimu .fetimusort,.addnewtimu .fetimudifficulty,.addnewtimu .fetimuanalysis{
+    font-size: 16px;
+    color: #000;
+    padding: 10px 0 10px;
+    line-height: 1;
+}
+.addnewtimu .fetimusort>span,.addnewtimu .fetimudifficulty>span{
+    margin-right: 20px;
+    width: 90px;
+    display: inline-block;
+}
+.addnewtimu .fetimusort>span i,.addnewtimu .fetimudifficulty>span i,.addnewtimu .fetimuanalysis>span i{
+    margin-right: 10px;
+    color: #999;
+}
+.addnewtimu .fetimusort>select,.addnewtimu .fetimudifficulty>select{
+    padding: 2px 2%;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+.addnewtimu .fetimuanalysis>span{
+    float: left;
+    width: 90px;
+}
+.addnewtimu .fetimuanalysis .feimage{
+    margin-left: 115px;
+    width: 570px;
+    height: 70px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+}
+.addnewtimu .feoperation{
+    text-align: center;
+    padding: 20px 0;
+}
+.addnewtimu .feoperation a{
+    width: 100px;
+    height: 30px;
+    display: inline-block;
+    background: #ff6c00;
+    color: #fff;
+    border-radius: 5px;
+    line-height: 30px;
+}
+
+
+
+/*布置作业-新*/
+.fe-arrangetask-pop{
+    padding:30px 20px 20px;
+    background: #fff;
+}
+.fe-arrangetask-pop>ul{
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+}
+.fe-arrangetask-pop>ul>li{
+     padding: 10px;
+     border-bottom: 1px solid #e6e6e6;
+ }
+.fe-arrangetask-pop>ul>#classes>div{
+    display:inline-block;
+    cursor:pointer;
+    margin-right:20px;
+    width:140px;
+    height:30px;
+    line-height:30px;
+ }
+.fe-arrangetask-pop>ul>#classes>div>i{
+    float:left;
+    margin-right:10px;
+    width:20px;
+    height:30px;
+    background:url("../images/temp/kuang.png") no-repeat center;
+ }
+.fe-arrangetask-pop>ul>#classes>div.active>i{
+    background:url("../images/temp/goujiakuang.png") no-repeat center;
+ }
+.fe-arrangetask-pop>ul>li:last-child{
+    border-bottom:none;
+}
+.fe-arrangetask-pop>ul>li svg{
+    display: none;
+}
+.fe-arrangetask-pop>ul>li>span,.fe-arrangetask-pop>ul>li>label{
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    color: #000;
+}
+.fe-arrangetask-pop>ul>li>label{
+    margin-left: 10px;
+    cursor: pointer;
+}
+.fe-arrangetask-pop>ul>li>button{
+    width: 100px;
+    height: 30px;
+    line-height: 28px;
+    border: none;
+    outline: none;
+    float: right;
+    color: #00b7ee;
+    background: #fff;
+}
+.fe-arrangetask-pop>ul>li>button>i{
+    margin-right: 5px;
+}
+.fe-arrangetask-pop ul li input[type=text]{
+    /*border-radius: 3px;*/
+    padding: 2px 10px;
+    border: 1px solid #e6e6e6;
+}
+.fe-arrangetask-pop ul li select{
+    /*border-radius: 3px;*/
+    padding: 2px 2%;
+    border: 1px solid #e6e6e6;
+    margin-right: 10px;
+}
+.fe-add-new-timu{
+    color: #666;
+    padding: 10px 0;
+}
+.fe-add-new-timu span{
+    display: inline-block;
+    width: 100px;
+}
+.fe-add-new-timu b{
+    font-size: 18px;
+    padding: 0 10px;
+    margin-left: 10px;
+}
+.fe-add-new-timu b:hover{
+    color: #Ff6c00;
+    cursor: pointer;
+}
+.fe-arrangetask-pop .fe-save{
+    text-align: right;
+    padding: 20px 20px 0;
+}
+.fe-arrangetask-pop .fe-save button{
+    text-align: center;
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    line-height: 28px;
+    background: #00aaff;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+}
+.fe-arrangetask-pop .fe-random{
+    display: none;
+}
+/*题库选择*/
+.fe-select-question-pop{
+    height: 550px;
+    position: relative;
+    padding-bottom: 51px;
+    box-sizing: border-box;
+}
+.fe-select-question-pop .fe-select-question-left{
+    float: left;
+    position:relative;
+    width: 50%;
+}
+.fe-select-question-pop .fe-select-question-left>p{
+    padding: 10px;
+}
+.fe-select-question-pop .fe-select-question-left>p input{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+}
+.fe-select-question-pop .fe-select-question-left .fe-select-condition{
+    padding:5px 10px;
+    background: #e5e5e5;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+.fe-select-question-pop .fe-select-question-left .fe-select-condition .fe-checkall{
+    display: inline-block;
+}
+.fe-select-question-pop .fe-select-question-left .fe-select-condition .fe-classify{
+    display: inline-block;
+    position: absolute;
+    width: 110px;
+    height: 30px;
+}
+.fe-select-question-pop .fe-select-question-left .fe-select-condition .fe-difficulty{
+    display: inline-block;
+    position: absolute;
+    width: 110px;
+    height: 30px;
+    left: 165px;
+}
+.fe-select-question-pop .fe-select-question-left .fe-select-condition .fe-type{
+    display: inline-block;
+    position: absolute;
+    width: 110px;
+    height: 30px;
+    left: 275px;
+}
+.fe-select-question-pop .fe-select-question-left .fe-select-condition .fe-checkall label{
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+}
+.fe-select-question-pop .fe-select-question-left .fe-select-condition  button{
+    display: inline-block;
+    height: 30px;
+    line-height: 28px;
+    text-align: center;
+    width: 100px;
+    outline: none;
+    border: 1px solid #ccc;
+    margin: 0 5px;
+    border-radius: 3px;
+}
+.fe-select-question-pop .fe-select-question-left .fe-select-condition  .fe-already-mes,
+.fe-select-question-pop .fe-select-question-left .fe-select-condition  .fe-already-difficulty,
+.fe-select-question-pop .fe-select-question-left .fe-select-condition  .fe-already-type{
+    position: absolute;
+    top: 0;
+    height: 30px;
+    line-height: 28px;
+    text-align: center;
+    width: 100px;
+    outline: none;
+    border: 1px solid #ccc;
+    margin: 0 5px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    background: #fff;
+    display: none;
+}
+.fe-select-question-pop .fe-select-question-left .fe-select-condition  .fe-difficulty ul,
+.fe-select-question-pop .fe-select-question-left .fe-select-condition  .fe-type ul{
+    position: absolute;
+    z-index: 10;
+    border: 1px solid #ccc;
+    background: #fff;
+    width: 100px;
+    left: 5px;
+    /* right: 5px; */
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 3px;
+    display: none;
+    box-shadow: 0 0 10px #eee;
+}
+.fe-select-question-pop .fe-select-question-left .fe-select-condition  .fe-difficulty ul li,
+.fe-select-question-pop .fe-select-question-left .fe-select-condition  .fe-type ul li{
+    padding: 5px 0;
+}
+.fe-select-question-pop .fe-select-question-left .fe-select-condition  .fe-difficulty ul li:hover,
+.fe-select-question-pop .fe-select-question-left .fe-select-condition  .fe-type ul li:hover{
+    background: #e6e6e6;
+    cursor: pointer;
+}
+.fe-select-question-pop .fe-select-question-left .fe-select-condition  .fe-already-mes a,
+.fe-select-question-pop .fe-select-question-left .fe-select-condition  .fe-already-difficulty a,
+.fe-select-question-pop .fe-select-question-left .fe-select-condition  .fe-already-type a{
+    display: inline-block;
+    width: 77px;
+    height: 28px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    padding: 0 5px;
+    line-height: 28px;
+    box-sizing: border-box;
+}
+.fe-select-question-pop .fe-select-question-left .fe-select-condition  .fe-already-mes b,
+.fe-select-question-pop .fe-select-question-left .fe-select-condition  .fe-already-difficulty b,
+.fe-select-question-pop .fe-select-question-left .fe-select-condition  .fe-already-type b{
+    float: right;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 18px;
+    cursor: pointer;
+}
+.fe-select-question-pop .fe-select-question-left .fe-question-bank{
+    height: 373px;
+    /*position: relative;
+    padding-bottom: 30px;*/
+    box-sizing: border-box;
+}
+.fe-select-question-pop .fe-select-question-left .fe-question-bank .fe-item{
+    padding: 5px 0;
+}
+.fe-select-question-pop .fe-select-question-left .fe-question-bank .fe-item:hover{
+    background: #e5e5e5;
+    cursor: pointer;
+}
+.fe-select-question-pop .fe-select-question-left .fe-question-bank .fe-item span{
+    float: left;
+    width: 20px;
+    background:url("../images/temp/kuang.png") no-repeat center;
+    height:20px;
+    padding-left: 10px;
+}
+.fe-select-question-pop .fe-select-question-left .fe-question-bank .fe-item span.active{
+    background:url("../images/temp/goujiakuang.png") no-repeat center;
+}
+.fe-select-question-pop .fe-select-question-left .fe-question-bank .fe-item h3{
+    margin-left: 30px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.fe-select-question-pop .fe-select-question-left .fe-question-bank .fe-load-more{
+    position: absolute;
+    height: 30px;
+    bottom: -30px;
+    width: 100%;
+}
+.fe-select-question-pop .fe-select-question-left .fe-question-bank .fe-load-more button{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #e6e6e6;
+    color: #666;
+}
+.fe-select-question-pop .fe-select-question-left .fe-question-bank .fe-load-more button:hover{
+    color: #Ff6c00;
+}
+.fe-select-question-pop .fe-select-question-right{
+    float: left;
+    width: 50%;
+    /*background: red;*/
+    height: 100%;
+}
+.fe-select-question-pop .fe-select-question-right .fe-select-question-right-top{
+    text-align: right;
+    padding:7px 10px;
+    background: #e5e5e5;
+}
+.fe-select-question-pop .fe-select-question-right .fe-select-question-right-top span{
+    float: left;
+    height: 30px;
+    line-height: 30px;
+}
+.fe-select-question-pop .fe-select-question-right .fe-select-question-right-top button{
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    line-height: 28px;
+    border: 1px solid #ccc;
+    outline: none;
+    border-radius: 3px;
+}
+.fe-select-question-pop .fe-select-question-right .fe-already-select-question{
+    height: 455px;
+    box-sizing: border-box;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+.fe-select-question-pop .fe-select-question-right .fe-already-select-question .fe-item{
+    padding: 5px 10px;
+    position: relative;
+}
+.fe-select-question-pop .fe-select-question-right .fe-already-select-question .fe-item:hover{
+    cursor: pointer;
+    background: #e5e5e5;
+}
+.fe-select-question-pop .fe-select-question-right .fe-already-select-question .fe-item h3{
+    margin-right: 20px;overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.fe-select-question-pop .fe-select-question-right .fe-already-select-question .fe-item i{
+    position: absolute;right: 10px;top: 7px;font-size: 20px;color: #999;
+}
+.fe-select-question-pop .feoperation{
+    text-align: right;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.fe-select-question-pop .feoperation button{
+    display: inline-block;
+    box-sizing: border-box;
+    height: 30px;
+    width: 100px;
+    text-align: center;
+    line-height: 28px;
+    outline: none;
+    background: #00a8e6;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+}
+.fe-knowledgepoint-pop{
+    padding:0 20px 20px;
+}
+.fe-knowledgepoint-pop .feone-level{
+    padding-top: 10px;
+}
+.fe-knowledgepoint-pop .fetwo-level,
+.fe-knowledgepoint-pop .fethree-level{
+    padding-top: 5px;
+}
+.fe-knowledgepoint-pop .feone-level i{
+    float: left;
+    width: 20px;
+    font-size: 18px;
+    line-height: 24px;
+    color: #00a8e6;
+    cursor: pointer;
+}
+.fe-knowledgepoint-pop .feone-level h4{
+    margin-left: 20px;
+    padding-left: 10px;
+    font-size: 16px;
+}
+.fe-knowledgepoint-pop .feone-level h4:hover{
+    background: #f1f1f1;
+    cursor: pointer;
+    color: #Ff6c00;
+}
+.fe-knowledgepoint-pop .feone-level h4 span{
+    float: right;
+    color: #999;
+    font-size: 16px;
+}
+.fe-knowledgepoint-pop .fetwo-level{
+    margin-left: 30px;
+    display: none;
+}
+.fe-knowledgepoint-pop .fethree-level{
+    margin-left: 10px;
+    display: none;
+}
+.fe-knowledgepoint-pop .fe-nav{
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+.fe-knowledgepoint-pop .fe-nav span{
+    width: 120px;
+    height: 30px;
+    display: inline-block;
+    margin-right: 40px;
+    background: #fff;
+    line-height: 30px;
+    text-align: center;
+    color: #111;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.fe-knowledgepoint-pop .fe-nav span.active{
+    background: #Ff6c00;
+    color: #fff;
+}
+/*试卷题目批量导入*/
+.fe-batchimport-question>h1{
+    background: #999;
+    color: #fff;
+    font-size: 24px;
+    padding-left: 20px;
+}
+.fe-batchimport-question .fe-batchimport-question-left{
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    /*border-right: 1px solid #ccc;*/
+    position: relative;
+}
+.fe-batchimport-question .fe-batchimport-question-right{
+    float: left;
+    width: 50%;
+    /*box-sizing: border-box;*/
+}
+.fe-batchimport-question .fe-batchimport-question-left .fe-left-nav,
+.fe-batchimport-question .fe-batchimport-question-right .fe-right-nav{
+    float: left;
+    width: 100%;
+    height: 35px;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.fe-batchimport-question .fe-batchimport-question-right .fe-right-nav{
+    border-left: 1px solid #ccc;
+}
+.fe-batchimport-question .fe-batchimport-question-left .fe-left-con,
+.fe-batchimport-question .fe-batchimport-question-right .fe-right-con{
+    /*padding-top: 35px;*/
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+.fe-batchimport-question .fe-batchimport-question-right .fe-right-con{
+    border-left: 1px solid #ccc;
+}
+.fe-batchimport-question .fe-batchimport-question-left .fe-left-nav span{
+    display: inline-block;
+    width: 100px;
+    height: 34px;
+    line-height: 34px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box
+}
+.fe-batchimport-question .fe-batchimport-question-left .fe-word-type{
+    background: #f1f1f1;
+    position: absolute;
+    width: 100%;
+    top: 35px;
+    display: none;
+    /*height: 100px;*/
+}
+.fe-batchimport-question .fe-batchimport-question-left .fe-word-type>p,
+.fe-batchimport-question .fe-batchimport-question-left .fe-word-type .fecenter{
+    padding: 10px;
+    font-size: 20px;
+    color: #Ff6c00;
+    text-align: center;
+}
+.fe-batchimport-question .fe-batchimport-question-left .fe-word-type>p a{
+    font-size: 18px;
+    color: #Ff6c00;
+    margin-left: 10px;
+}
+.fe-batchimport-question .fe-batchimport-question-left .fe-word-type>p a:hover{
+    text-decoration: underline;
+}
+.fe-batchimport-question .fe-batchimport-question-left .fe-word-type>div a{
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    background: #0092f9;
+    color: #fff;
+    outline: none;
+    border: none;
+    position: relative;
+    border-radius: 3px;
+    transition: background-color .2s linear;
+}
+.fe-batchimport-question .fe-batchimport-question-left .fe-word-type>div a:hover{
+    background: #026fbb;
+}
+.fe-batchimport-question .fe-batchimport-question-left .fe-word-type>div a input{
+    top:0;
+    bottom:0;
+    left: 0;
+    right:0;
+    position: absolute;
+    opacity: 0;
+    width: 200px;
+    height: 40px;
+    filter:alpha(opacity=0);/* 兼容IE */
+    cursor: pointer;
+}
+.fe-batchimport-question .fe-batchimport-question-left .fe-word-type .fe-bottom{
+    margin-top: 10px;
+}
+.fe-batchimport-question .fe-batchimport-question-left .fe-word-type .fe-bottom button{
+    display: block;
+    height: 35px;
+    width: 100%;
+    background: #00c2ff;
+    color: #fff;
+}
+.fe-batchimport-question .fe-batchimport-question-right .fe-right-nav span{
+    display: inline-block;
+    width: 80px;
+    height: 34px;
+    line-height: 34px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+}
+.fe-batchimport-question .fe-batchimport-question-left .fe-left-nav span i{
+    margin-right: 5px;
+}
+.fe-batchimport-question .fe-batchimport-question-right .fe-right-nav span b{
+    font-weight: normal;
+}
+.fe-batchimport-question .fe-batchimport-question-left .fe-left-nav span:hover{
+    color: #Ff6c00;
+}
+.fe-batchimport-question .fe-batchimport-question-right .fe-right-nav span:hover,
+.fe-batchimport-question .fe-batchimport-question-right .fe-right-nav span.active{
+    background: #e5e5e5;
+    color: #Ff6c00;
+}
+.fe-batchimport-question .fe-batchimport-question-right .fe-right-con .fepanel{
+    padding-bottom: 10px;
+}
+.fe-batchimport-question .fe-batchimport-question-right .fe-right-con .fe-head{
+    padding: 10px 0;
+}
+.fe-batchimport-question .fe-batchimport-question-right .fe-right-con .fe-head span{
+    border-left: 4px solid #5d9eec;
+    color: #5d9eec;
+    font-size: 16px;
+    line-height: 22px;
+    margin-left: 15px;
+    padding-left: 15px;
+}
+.fe-batchimport-question .fe-batchimport-question-right .fe-right-con .fe-stems{
+    background: #eee none repeat scroll 0 0;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    color: #878787 !important;
+    font-size: 16px;
+    padding: 5px 25px;
+    font-weight: 700;
+}
+.fe-batchimport-question .fe-batchimport-question-right .fe-right-con .fe-items{
+    padding: 5px 20px 0;
+}
+.fe-batchimport-question .fe-batchimport-question-right .fe-right-con .fe-items .i-select{
+    padding: 0px 15px;
+    line-height: 30px;
+}
+.fe-batchimport-question .fe-batchimport-question-right .fe-right-con .fe-items div.i-select:hover{
+    background-color: #d9e8ff;
+}
+.fe-batchimport-question .fe-batchimport-question-right .fe-right-con .fe-items textarea{
+    width: 600px;
+    height: 120px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+.fe-batchimport-question .feoperation{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    margin-left: -50px;
+}
+.fe-batchimport-question .feoperation button{
+    display: inline-block;
+    width: 100px;
+    height: 35px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    line-height: 35px;
+    transition: background-color .2s linear;
+}
+.fe-batchimport-question .feoperation button i{
+    margin-right: 5px;
+}
+.fe-batchimport-question .feoperation button:first-child{
+    margin-bottom: 20px;
+    background: #00b7ee;
+    color: #fff;
+}
+.fe-batchimport-question .feoperation button:first-child:hover{
+    background: #000;
+}
+.fe-batchimport-question .feoperation button:last-child{
+    background: #Ff6c00;
+    color: #fff;
+}
+.fe-batchimport-question .feoperation button:last-child:hover{
+    background: #e85e2e;
+}
+.fe-batchimport-question .fe-goback{
+    text-align: center;
+    display: none;
+}
+.fe-batchimport-question .fe-goback h1{
+    font-size: 24px;
+    padding: 40px 0 20px;
+}
+.fe-batchimport-question .fe-goback button{
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    line-height: 28px;
+    outline: none;
+    background: #Ff6c00;
+    text-align: center;
+    border-radius: 3px;
+    color: #fff;
+    border: none;
+}
+#zwb_upload {
+    margin-left: 4px;
+    padding: 4px 10px;
+    height: 20px;
+    line-height: 20px;
+    position: relative;
+    cursor: pointer;
+    color: #888;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+#zwb_upload input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    bottom:0;
+    left: 0;
+    width: 100px;
+    height: 28px;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+}
+#zwb_upload:hover {
+    color: #444;
+    background: #eee;
+    border-color: #ccc;
+    text-decoration: none;
+}
+#zwb_upload_status {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+}
+#zwb_upload_status .box {
+    position: absolute;
+    top: 30px;
+    left: 10%;
+    width: 80%;
+    height: auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #666;
+}
+#zwb_upload_status .box .title {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    line-height: 40px;
+    text-align: center;
+}
+#zwb_upload_status .box .list {
+    width: 100%;
+    padding-bottom: 10px;
+    max-height: 600px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#zwb_upload_status .box .list ul,
+#zwb_upload_status .box .list li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#zwb_upload_status .box .list ul {
+    width: 100%;
+    overflow: hidden;
+}
+#zwb_upload_status .box .list ul li {
+    float: left;
+    vertical-align: middle;
+    width: 150px;
+    position: relative;
+    text-align: center;
+    border: 1px solid #ddd;
+    margin: 10px;
+    height: 120px;
+    line-height: 120px;
+    cursor: pointer;
+    background: url("../images/temp/upload_bg.png") no-repeat;
+    background-size: 100% 100%;
+}
+#zwb_upload_status .box .list ul li span.success {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    width: 35px;
+    height: 35px;
+    background: url("../images/temp/upload_success.png");
+    background-size: 100% 100%;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    opacity: 0;
+}
+#zwb_upload_status .box .list ul li span.success2 {
+    opacity: 1;
+}
+#zwb_upload_status .box .list ul li span.delete {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    background: url("../images/temp/delete_white.png");
+    background-size: 100% 100%;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    opacity: 0;
+}
+#zwb_upload_status .box .list ul li img {
+    display: inline;
+    width: 76%;
+    vertical-align: middle;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    max-height: 95%;
+}
+#zwb_upload_status .box .list ul li a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+#zwb_upload_status .box .list ul li a p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 24px;
+    margin: 0;
+    color: #fff;
+    font-size: 12px;
+}
+#zwb_upload_status .box .list ul li a .name {
+    margin-top: 20px;
+    padding: 0 10px;
+}
+#zwb_upload_status .box .list ul li .progressBox {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 9px;
+    left: -1px;
+    border: 1px solid #ddd;
+    border-top: none;
+    background: #f6f6f6;
+    overflow: hidden;
+}
+#zwb_upload_status .box .list ul li .progressBox div {
+    width: 0;
+    height: 100%;
+    background: lightgreen;
+}
+#zwb_upload_status .box .list ul li .err {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -20px;
+    width: 0;
+    height: 40px;
+    background: #e4393c;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    box-shadow: 1px 1px 1px #f9f9f9;
+}
+#zwb_upload_status .box .list ul li:hover a {
+    opacity: 1;
+}
+#zwb_upload_status .box .list ul li:hover span.delete {
+    opacity: 1;
+}
+#zwb_upload_status .box .list ul li:hover img {
+    width: 100%;
+}
+#zwb_upload_status .box .foot {
+    border-top: 1px solid #ddd;
+    height: 50px;
+}
+#zwb_upload_status .box .foot span {
+    float: right;
+    margin-right: 15px;
+    width: 120px;
+    height: 30px;
+    background: #00B7EE;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 7.5px;
+    border-shadow: 1px 1px 1px #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#zwb_upload_status .box .foot .off {
+    background: none;
+    border: 1px solid #ddd;
+    color: #666;
+}
+@media screen and (max-width: 767px) {
+    #zwb_upload_status .box {
+        left: 0;
+        width: 300px;
+        left: 50%;
+        margin-left: -150px;
+    }
+    #zwb_upload_status .box .list {
+        height: 300px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    #zwb_upload_status .box .list ul li {
+        width: 118px;
+        margin: 10px;
+    }
+}
+/*作业模板*/
+.fetaskTemplate{
+    margin-bottom: 200px;
+}
+.fetaskTemplate .fepanel{
+    padding-bottom: 20px;
+}
+.fetaskTemplate .fepanel>h3{
+    font-size: 20px;
+    padding: 10px 0;
+    color: #5d9eec;
+    line-height: 1;
+}
+.fetaskTemplate .fepanel .febox{
+    padding: 0 20px 10px;
+}
+.fetaskTemplate .fepanel .febox .studentAnswer{
+
+}
+.fetaskTemplate .fepanel .febox .fe-stems{
+    color: #333;
+    font-size: 16px;
+}
+.fetaskTemplate .fepanel .febox .fe-stems b{
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50px;
+    border: 1px solid #ff6c00;
+    color: #000;
+    text-align: center;
+    line-height: 22px;
+    font-weight: normal;
+}
+.fetaskTemplate .fepanel .febox .fe-stems input{
+    border: none;
+    border-bottom: 1px solid #Ff6c00;
+    margin: 0 10px;
+    padding: 2px;
+}
+.fetaskTemplate .fepanel .febox .fe-items{
+    padding-left: 20px;
+    font-size: 16px;
+}
+.fetaskTemplate .fepanel .febox .fe-items textarea{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    height: 120px;
+    margin-top: 10px;
+}
+.fetaskTemplate .fepanel .febox .fe-items textarea:focus{
+    border-color: #Ff6c00;
+}
+.fetaskTemplate .fepanel .febox .fe-items .i-select{
+    padding: 0px 10px;
+    margin: 5px 0;
+}
+.fetaskTemplate .fepanel .febox .fe-items .i-select:hover,.fetaskTemplate .fepanel .febox .fe-items .i-select.active{
+    background: #d9e8ff;
+    cursor: pointer;
+}
+.fetaskTemplate .fepanel .febox .fe-answer{
+    margin-top: 10px;
+    padding: 10px;
+    /*background: #00b7ee;*/
+    border-top:1px solid #e5e5e5;
+}
+.fetaskTemplate .fepanel .febox .fe-answer span{
+    background: #27b76f;
+    border-radius: 3px;
+    padding: 2px 10px;
+    color: #fff;
+}
+.fetaskTemplate .fepanel .febox .fe-answer div{
+    padding: 10px 0 20px;
+}
+/*答题卡*/
+.fetaskTemplate .feanswer-card{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    /*height: 200px;*/
+    /*right: 0;*/
+    /*left: 0;*/
+    width: 860px;
+    background: #f5f5f5;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+.feanswer-card .fepanel{
+    display: inline-block;
+    width: 50%;
+    padding: 10px 10px 0;
+    box-sizing: border-box;
+}
+
+.feanswer-card .fepanel h4{
+    font-size: 18px;
+    color: #00b7ee;
+    margin-bottom: 10px;
+}
+.feanswer-card .fepanel span{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid #Ff6c00;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.feanswer-card .fepanel span.active{
+    background: #Ff6c00;
+    color: #fff;
+}
+.feanswer-card .feoperation{
+    text-align: center;
+    padding: 10px 0;
+}
+.feanswer-card .feoperation button{
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    line-height: 28px;
+    background: #00b7ee;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    transition: background .3s linear;
+}
+.feanswer-card .feoperation button:hover{
+    background: #000;
+}
+.feQAmyquiz .fenav,.feQAmyreply .fenav{
+    border-bottom: 1px dashed #e5e5e5;
+}
+.feQAmyquiz .fenav li,.feQAmyreply .fenav li{
+    float: left;padding:0 20px;margin: 20px 0;position: relative;
+}
+.feQAmyquiz .fenav li:after,.feQAmyreply .fenav li:after{
+    position: absolute;right: 0;top: 7px;width: 1px;height: 16px;background: #e5e5e5;display: table;content: '';
+}
+.feQAmyquiz .fenav li:last-child:after,.feQAmyreply .fenav li:last-child:after{
+    width: 0;
+}
+.feQAmyquiz .fenav li span,.feQAmyreply .fenav li span{
+    display: inline-block;width: 70px;height: 28px;background: #fff; border-radius: 3px;line-height: 28px;text-align: center;
+}
+.feQAmyquiz .fenav li span:hover,.feQAmyquiz .fenav li span.active,
+.feQAmyreply .fenav li span:hover,.feQAmyreply .fenav li span.active{
+    color:#fff;background: #FF6c00;cursor: pointer;
+}
+.feQAmyquiz .fecontent li,.feQAmyreply .fecontent li{
+    padding: 20px 0;border-bottom: 1px solid #e5e5e5;position: relative;
+}
+.feQAmyquiz .fecontent li>a,.feQAmyreply .fecontent li>a{
+    font-size: 16px;color: #000;padding-right: 170px;display: block;box-sizing: border-box;
+}
+.feQAmyquiz .fecontent li>p{
+    font-size: 14px;color: #999;padding-right: 120px;box-sizing: border-box;padding: 10px 0 0;
+}
+.feQAmyreply .fecontent li>h3{
+    color: #999;font-size: 14px;padding-right: 120px;box-sizing: border-box;padding-top: 10px;
+}
+.feQAmyreply .fecontent li .fenote{
+    line-height: 1;padding-top: 10px;
+}
+.feQAmyreply .fecontent li .fenote span{
+    font-size: 14px;color: #999;margin-right: 10px;
+}
+.feQAmyreply .fecontent li .fenote span>i{
+    background: url("../images/temp/user-1.jpg") no-repeat center;width: 16px;height: 16px;float: left;margin-right: 10px;
+}
+.feQAmyreply .fecontent li .fenote b{
+    border: 1px solid #FF6c00;color: #FF6c00;border-radius: 3px;font-weight: normal;padding: 0 5px;margin-left: 30px;
+}
+.feQAmyreply .fecontent li .feoperation button{
+    position: absolute;top:50%;right: 0;width: 100px;height: 30px;line-height: 28px;border: 1px solid #FF6c00;outline: none;
+    background: #FF6c00;border-radius: 5px;color: #fff;margin-top: -15px;transition: all .3s linear;
+}
+.feQAmyreply .fecontent li .feoperation button:hover{
+    background: #000;
+}
+.feQAmyreply .fecontent li .feoperation button.active{
+    background: #fff;color: #FF6c00;
+}
+
+.feQAmyquiz .fecontent li>p span{
+    margin-right: 40px;
+}
+.feQAmyquiz .fecontent li>p b{
+    padding-left: 20px;background: url("../images/temp/score-2.jpg") no-repeat left center;color: #FF6c00;font-weight: normal;
+}
+.feQAmyquiz .fecontent li>p u{
+    padding-left: 20px;background: url("../images/temp/money-1.png") no-repeat left center;color: #FF6c00;text-decoration: none;
+}
+.feQAmyquiz .fecontent li .feanswernum{
+    text-align: center;top: 50%;font-size: 14px;color: #999;margin-top: -25.5px;
+    position: absolute;right: 90px;padding-top: 30px;width: 80px;background: url("../images/temp/answer-num.png") no-repeat center top;
+}
+.feQAmyquiz .fecontent li .festate1{
+    text-align: center;top: 50%;font-size: 14px;color: #34a2ff;margin-top: -25.5px;
+    position: absolute;right: 0px;padding-top: 30px;width: 80px;background: url("../images/temp/state-1.png") no-repeat center top;
+}
+.feQAmyquiz .fecontent li .festate2,.feQAmyreply .fecontent li .festate2{
+    text-align: center;top: 50%;font-size: 14px;color: #13a654;margin-top: -25.5px;
+    position: absolute;right: 0px;padding-top: 30px;width: 80px;background: url("../images/temp/state-2.png") no-repeat center top;
+}
+.feQAmyquiz .fecontent li .festate3,.feQAmyreply .fecontent li .festate3{
+    text-align: center;top: 50%;font-size: 14px;color: #ff6c00;margin-top: -25.5px;
+    position: absolute;right: 0px;padding-top: 30px;width: 80px;background: url("../images/temp/state-3.png") no-repeat center top;
+}

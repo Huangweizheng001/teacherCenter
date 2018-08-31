@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">-->
+    <meta name="format-detection" content="telephone=yes">
+    <meta name="Keywords" content="福建教育网">
+    <meta name="description" content="福建教育网" />
+    <title>老师个人中心</title>
+    <link rel="shortcut icon" href="./images/public/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/swiper,animate,scroll.min.css" />
+    <!--<link rel="stylesheet" href="css/fetv.css" />-->
+    <link rel="stylesheet" href="css/fetvAppend.css" />
+
+</head>
+
+<body>
+
+<section class="feteachercenter">
+    <div class="container">
+        <div class="feteacherpersonalcenter-left">
+            <div class="feteacherpersonalcenter-left-head">
+                <form action="" id="membercenter">
+                    <div class="feimage">
+                        <img src="images/temp/teachercenter-1.jpg" alt="">
+                    </div>
+                    <div class="feteacher-picture">
+                        <img id="head" src="" alt="">
+                        <input type="file" accept="image/gif,image/jpeg,image/jpg,image/png" id="mytx" name="mphoto">
+                    </div>
+                    <h1 id="name"></h1>
+                    <h2>暂无身份认证,<a href="teachercenterauthsetting.html">马上去认证</a></h2>
+                </form>
+            </div>
+            <ul class="feteacherpersonalcenter-left-content">
+                <li>
+                    <a href="#">
+                        <i class="uk-icon-user"></i>
+                        <span>个人设置</span>
+                    </a>
+                    <ul class="fechild">
+                        <li>
+                            <a href="teachercenterpersonaldata.html">个人资料</a>
+                        </li>
+                        <li>
+                            <a href="teachercenterauthsetting.html">认证设置</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="uk-icon-book"></i>
+                        <span>我的课程</span>
+                    </a>
+                    <ul class="fechild">
+                        <li>
+                            <a href="teachercenterlivecourse.html" class="" style="display:none">直播课</a>
+                        </li>
+                        <li>
+                            <a href="teachercenterrecordedcourse.html">录播课</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="uk-icon-institution "></i>
+                        <span>主页管理</span>
+                    </a>
+                    <ul class="fechild">
+                        <li>
+                            <a href="teachercenterupdatedata.html">资料上传</a>
+                        </li>
+                        <li>
+                            <a href="teachercentervideophoto.html">视频/照片</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="uk-icon-graduation-cap"></i>
+                        <span>学生管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="uk-icon-desktop"></i>
+                        <span>名师工作室</span>
+                    </a>
+                    <ul class="fechild">
+                        <li>
+                            <a href="teachercentermystudio.html">我的工作室</a>
+                        </li>
+                        <li>
+                            <a href="teachercenterjoinedstudio.html">已加入工作室</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="feteacherpersonalcenter-right">
+            <div class="fenodata"></div>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.storage.js"></script>
+<!--<script type="text/javascript" src="js/swiper.jquery.min.js"></script>-->
+<script type="text/javascript" src="js/layer,wow,scroll.js"></script>
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script type="text/javascript" src="js/vue-resource.min.js"></script>
+<script type="text/javascript" src="js/fetv.js"></script>
+<script type="text/javascript" src="js/fetvAppend.js"></script>
+<script type="text/javascript" src="js/teacher.js"></script>
+<script>
+    $(function () {
+        getTeacher();
+    })
+</script>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link rel="shortcut icon" href="./images/public/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="css/base.css" />
+    <link href="../ueditor/themes/default/css/ueditor.css" rel="stylesheet" />
+    <!--<link rel="stylesheet" href="css/swiper,animate,scroll.min.css" />-->
+    <!--<link rel="stylesheet" href="css/fetv.css" />-->
+    <link rel="stylesheet" href="css/fetvAppend.css" />
+</head>
+<body>
+    <header id="header">
+			<teacher-header-template></teacher-header-template>
+		</header>
+     <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.storage.js"></script>
+    <!--<script type="text/javascript" src="js/swiper.jquery.min.js"></script>-->
+    <script type="text/javascript" src="js/layer,wow,scroll.js"></script>
+    <script type="text/javascript" src="js/vue.min.js"></script>
+    <script type="text/javascript" src="js/vue-resource.min.js"></script>
+    <script type="text/javascript" src="js/fetv.js"></script>
+    <script type="text/javascript" src="js/fetvAppend.js"></script>
+    <!--<script type="text/javascript" src="js/feteachercenter.js"></script>-->
+    <script type="text/javascript" src="js/teacher.js"></script>
+    <script>
+        Vue.component('teacher-header-template', {
+            template: '<div style="background: #474747;height:42px;line-height:42px">' +
+                        '<div class="fe-header-top-bar">' +
+                            '<div class="container">' +
+                                '<a class="fe-header-top-logo wow slideInLeft" @click="goOut">' +
+                                    '<img v-bind:src="smallLogo | addRoot" alt="福建教育网" />&nbsp;&nbsp;网站首页' +
+                                '</a>&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;' +
+                                '<a href="#this">App 下载</a>' +
+                                '<div class="fe-header-top-other" style="margin-right: 50px;float:right;">' +
+                                    '<a v-show="!isLogined" @click="setPrePage">登录</a>' +
+                                    '<a v-show="!isLogined" @click="setPrePage">&nbsp;/&nbsp;注册</a>' +
+                                    '<a v-show="isLogined" >{{nickName}}</a>' +
+                                    '<a v-show="isLogined" @click="signOut">&nbsp;/&nbsp;安全退出</a>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>' +
+
+                    '</div>',
+            data: function data() {
+                return {
+                    isLogined: false,
+                    nickName: 'xxx',
+                    index: 'index.html',
+                    login: 'login.html',
+                    reg: 'login.html?login=3',
+                    member: '',
+                    smallLogo: 'images/public/logo-icon-small.png',
+                    headimg: "images/temp/mr-tx.png"
+                };
+            },
+            mounted: function mounted() {
+                //1.0ready --> 2.0
+                this.$nextTick(function () {
+                    //初始化
+                    this.initData();
+
+                });
+            },
+            filters: {
+                addRoot: function addRoot(obj) {
+                    return "http://www.fetv.cn/" + obj;//feweb/
+                },
+                addRootFile: function addRootFile(obj) {
+                    return SERVERROOTFILE + obj;
+                }
+            },
+            methods: {
+                initData: function initData() {
+                    if ($(window).storager({
+                        key: 'feUid'
+                    }).readStorage() == undefined) {
+                        this.isLogined = false;
+                    } else {
+                        this.isLogined = true;
+                        this.nickName = $(window).storager({
+                            key: 'feUNickName'
+                        }).readStorage();
+                        this.headimg = $(window).storager({
+                            key: 'feUIcon'
+                        }).readStorage();
+                    }
+                },
+                goOut:function goOut()
+                {
+                    top.location.href = "http://www.fetv.cn/";//feweb/
+                },
+                signOut: function signOut() {
+                    $(window).storager({
+                        key: 'feUid'
+                    }).removeStorage();
+                    $(window).storager({
+                        key: 'feUNickName'
+                    }).removeStorage();
+                    sessionStorage.removeItem('feUid');
+                    sessionStorage.removeItem('feUNickName');
+                    sessionStorage.removeItem('feUType');
+                    sessionStorage.removeItem('feUIcon');
+                    sessionStorage.removeItem('feUName');
+                    sessionStorage.removeItem('feCommunityUid');
+                    //$.session.remove('feUid');
+                    //$.session.remove('feUNickName');
+                    //$.session.remove('feUType');
+                    //$.session.remove('feUIcon');
+                    //$.session.remove('feUName');
+                    //$.session.remove('feCommunityUid');
+                    var _this = this;
+                    this.$http.post("../ashx/Login.ashx?action=outLogin",
+                        {
+                           
+                        }
+                        , { emulateJSON: true })
+                        .then(function (res) {
+                            if (res.body == "1") {
+                                top.location.href = "http://www.fetv.cn/";//feweb/
+                                //parent.close();
+                            }
+                            else {
+                                
+                            }
+                        })
+                   
+                    //window.location.reload();
+                },
+                setPrePage: function setPrePage() {
+                    $(window).storager({ //fePrePage
+                        key: 'fePrePage',
+                        // value: $.getBasePath(1),
+                        value: 'index.html',
+                        expires: 0
+                    }).addStorage();
+                }
+            }
+        });
+        var header = new Vue({
+            el: '#header'
+        });
+    </script>
+</body>
+</html>
